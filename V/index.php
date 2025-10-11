@@ -9,9 +9,9 @@
 <body>
     <div id="login">
         <h1 class="title">Login</h1>
-        <form name="nForm" method="POST" action="login.php">
-            <input type="text" placeholder="User">
-            <input type="password" placeholder="Password">
+        <form name="nForm" method="POST" action="../C/login.php">
+            <input type="text" name="nName" placeholder="User">
+            <input type="password" name="nPass" placeholder="Password">
             <input type="submit" value="Get in">
         </form>
     </div>    
