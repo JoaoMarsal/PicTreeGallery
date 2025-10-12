@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PicTree - Your place for photos</title>
     <link rel="stylesheet" href="index.css">
+    <script src="js/index.js"></script>
 </head>
 <body>
     <section class="boxes">
@@ -15,7 +16,7 @@
                 <input class="formInput" type="password" name="nPass" placeholder="Password">
                 <input type="submit" value="Get in" class="button">
             </form>
-            <p>Don't have an account? <a>Sign up</a></p>
+            <p>Don't have an account? <a onclick="signUp()">Sign up</a></p>
         </div>    
 
         <div id="register" class="divForm">
