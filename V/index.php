@@ -19,7 +19,7 @@
             <p>Don't have an account? <a onclick="signUp()">Sign up</a></p>
         </div>    
 
-        <div id="register" class="divForm">
+        <div id="register" class="divForm hidden">
             <h1 class="title">Registro</h1>
             <form name="nRegister">
                 <input class="formInput" type="text" placeholder="User name">
@@ -27,6 +27,7 @@
                 <input class="formInput" type="password" placeholder="Password">
                 <input type="submit" value="Sign up" class="button">
             </form>
+            <p>Already have an account? <a onclick="signUp()">Log in</a></p>
         </div>
     </section>
 </body>

@@ -23,10 +23,6 @@ input {
     height: 100vh;
 }
 
-#register {
-    display: none;
-}
-
 /*CSS for divs*/
 
 .divForm {
@@ -35,6 +31,11 @@ input {
     padding: 1em;
     border: black 0.2em solid;
     border-radius: 1em;
+}
+
+
+.hidden {
+    display: none;
 }
 
 /*CSS for inputs*/
