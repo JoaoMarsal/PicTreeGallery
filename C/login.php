@@ -21,4 +21,14 @@
         header('Location: index.php');
         exit();
     }
+
+    if(isset($_POST['login'])){
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $checkEmail = $conn->query("SELECT * FROM users WHERE email = '$email'");
+        if($checkEmail -> num_rows > 0){
+            
+        }
+    }
 ?>
