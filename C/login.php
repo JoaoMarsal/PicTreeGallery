@@ -10,8 +10,15 @@
         $email = $_POST['email'];
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
         
-        $checkEmail = $conn->query("SELECT email FROM users WHERE email = '$email'"){
-            
+        $checkEmail = $conn->query("SELECT email FROM users WHERE email = '$email'");
+        if($checkEmail -> num_rows > 0){
+            $_SESSION['register_error'] = 'This email is aleady in use!';
+            $_SESSION['active_form'] = 'register';
+        } else {
+            $conn->query("INSERT INTO users(name, email, password, role) VALUES ('$name', '$email', '$password', 'user')");
         }
+
+        header('Location: index.php');
+        exit();
     }
 ?>
