@@ -11,9 +11,9 @@
     <section class="boxes">
         <div id="login" class="divForm">
             <h1 class="title">Login</h1>
-            <form name="nForm" method="POST" action="../C/login.php">
-                <input class="formInput" type="text" name="nName" placeholder="User">
-                <input class="formInput" type="password" name="nPass" placeholder="Password">
+            <form method="POST" action="../C/login.php">
+                <input class="formInput" type="text" placeholder="User">
+                <input class="formInput" type="password" placeholder="Password">
                 <input type="submit" value="Get in" class="button">
             </form>
             <p>Don't have an account? <a onclick="signUp()">Sign up</a></p>
@@ -21,11 +21,11 @@
 
         <div id="register" class="divForm hidden">
             <h1 class="title">Registro</h1>
-            <form name="nRegister">
-                <input class="formInput" type="text" placeholder="User name">
-                <input class="formInput" type="text" placeholder="E-mail">
-                <input class="formInput" type="password" placeholder="Password">
-                <input type="submit" value="Sign up" class="button">
+            <form method="POST" action="../C/login.php">
+                <input class="formInput" type="text" name="nName" placeholder="User name">
+                <input class="formInput" type="text" name="nEmail" placeholder="E-mail">
+                <input class="formInput" type="password" name="nPassword" placeholder="Password">
+                <button name="nRegister" type="submit">Sign Up</button>
             </form>
             <p>Already have an account? <a onclick="signUp()">Log in</a></p>
         </div>

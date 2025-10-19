@@ -8,5 +8,7 @@
 
     if($conn -> connect_error){
         die("Connection faliled: ". $conn->connect_error);
+    } else {
+        echo 'connection successful';
     }
 ?>
