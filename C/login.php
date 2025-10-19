@@ -13,14 +13,24 @@
             $_SESSION['active_form'] = 'nRegister';
         } else {
             $conn->query("INSERT INTO users (name, email, password, role) VALUES ('$name', '$email', '$password', 'user')");
+            $_SESSION['register_success'] = "Your account was created";
+            $_SESSION['active_form'] = 'nLogin';
         }
 
         header("Location: ../V/index.php");
         exit();
     }
 
+    if(isset($_POST["nLogin"])){
+        $name = $_POST['nName'];
+        $password = password_hash($_POST["nPassword"], PASSWORD_DEFAULT);
 
-//    
-//     if($checkEmail->num_rows == 0){
-//      }
+        $checkUser = $conn->query("SELECT * FROM users WHERE name = '$name' AND password = '$password'");
+        if($checkUser->num_rows == 0){
+            $_SESSION['login_malfunction'] = "Account doesn't exists";
+            $_SESSION['active_form'] = "nLogin";
+        } else {
+            //Password_verification
+        }
+    }
 ?>
