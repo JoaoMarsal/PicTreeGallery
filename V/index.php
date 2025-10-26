@@ -14,7 +14,7 @@
             <form method="POST" action="../C/login.php">
                 <input class="formInput" type="text" placeholder="Email" name="nLoginEmail">
                 <input class="formInput" type="password" name="nLoginPassword" placeholder="Password">
-                <button type="submit" name="nLogin">Get in</button>
+                <button type="submit" name="nLogin" class="button">Get in</button>
             </form>
             <p>Don't have an account? <a onclick="signUp()">Sign up</a></p>
         </div>    
@@ -25,7 +25,7 @@
                 <input class="formInput" type="text" name="nName" placeholder="User name">
                 <input class="formInput" type="text" name="nEmail" placeholder="E-mail">
                 <input class="formInput" type="password" name="nPassword" placeholder="Password">
-                <button name="nRegister" type="submit">Sign Up</button>
+                <button name="nRegister" type="submit" class="button">Sign Up</button>
             </form>
             <p>Already have an account? <a onclick="signUp()">Log in</a></p>
         </div>
