@@ -22,19 +22,20 @@
     }
 
     if(isset($_POST["nLogin"])){
-        $name = $_POST['nName'];
-        $password = $_POST['nPassword'];
+        $email = $_POST['nLoginEmail'];
+        $password = $_POST['nLoginPassword'];
 
-        $checkUser = $conn->query("SELECT * FROM users WHERE name = '$name' AND password = '$password'");
+        $checkUser = $conn->query("SELECT * FROM users WHERE email = '$email'");
         if($checkUser->num_rows > 0){
+            echo 'a';
             $user = $checkUser->fetch_assoc();
-            if(password_verify($password, $user['name'])){
+            if(password_verify($password, $user['password'])){
                 $_SESSION['name'] = $user['name'];
                 $_SESSION['email'] = $user['email'];
                 if($user['role'] === 'admin'){
                     header('Location: admin_page.php');
                 } else {
-                    header('Location: user_page.php');
+                    header('Location: ../V/user_page.php');
                 }
             }
         } else {
