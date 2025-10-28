@@ -27,7 +27,6 @@
 
         $checkUser = $conn->query("SELECT * FROM users WHERE email = '$email'");
         if($checkUser->num_rows > 0){
-            echo 'a';
             $user = $checkUser->fetch_assoc();
             if(password_verify($password, $user['password'])){
                 $_SESSION['name'] = $user['name'];
@@ -41,6 +40,8 @@
         } else {
             $_SESSION['login_malfunction'] = "Account doesn't exists";
             $_SESSION['active_form'] = "nLogin";
+            header('Location: ../V/index.php');
+            exit();
         }
     }
 ?>

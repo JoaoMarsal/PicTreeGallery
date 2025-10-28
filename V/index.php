@@ -1,3 +1,24 @@
+<?php
+
+    session_start();
+
+    $errors = [
+        'login' => $_SESSION['login_error'] ?? '',
+        'register' => $_SESSION['register_error'] ?? ''
+    ];
+    $activeForm = $_SESSION['active_form'] ?? 'login';
+
+    session_unset();
+
+    function showError($error) {
+        return !empty($error) ? "<p class='error-message'>$error</p>" : '';
+    }
+
+    function isActiveForm($formName, $activeForm) {
+        return $formName  !== $activeForm ? 'hidden' : '';
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +30,10 @@
 </head>
 <body>
     <section class="boxes">
-        <div id="login" class="divForm">
+        <div id="login" class="divForm <?= isActiveForm('login', $activeForm)?>">
             <h1 class="title">Login</h1>
             <form method="POST" action="../C/login.php">
+                <?= showError($errors['login'])?>
                 <input class="formInput" type="text" placeholder="Email" name="nLoginEmail">
                 <input class="formInput" type="password" name="nLoginPassword" placeholder="Password">
                 <button type="submit" name="nLogin" class="button">Get in</button>
@@ -19,9 +41,10 @@
             <p>Don't have an account? <a onclick="signUp()">Sign up</a></p>
         </div>    
         
-        <div id="register" class="divForm hidden">
+        <div id="register" class="divForm <?= isActiveForm('register', $activeForm)?>">
             <h1 class="title">Registro</h1>
             <form method="POST" action="../C/login.php">
+                <?= showError($errors['register'])?>
                 <input class="formInput" type="text" name="nName" placeholder="User name">
                 <input class="formInput" type="text" name="nEmail" placeholder="E-mail">
                 <input class="formInput" type="password" name="nPassword" placeholder="Password">
