@@ -1,3 +1,3 @@
 <?php
-    echo 'oi, ' + $_SESSION['name'];
+    echo 'oi, ';
 ?>

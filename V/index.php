@@ -6,7 +6,7 @@
         'login' => $_SESSION['login_error'] ?? '',
         'register' => $_SESSION['register_error'] ?? ''
     ];
-    $activeForm = $_SESSION['active_form'] ?? 'login';
+    $activeForm = $_SESSION['active_form'] ?? 'nLogin';
 
     session_unset();
 
@@ -30,7 +30,7 @@
 </head>
 <body>
     <section class="boxes">
-        <div id="login" class="divForm <?= isActiveForm('login', $activeForm)?>">
+        <div id="login" class="divForm <?= isActiveForm('nLogin', $activeForm)?>">
             <h1 class="title">Login</h1>
             <form method="POST" action="../C/login.php">
                 <?= showError($errors['login'])?>
@@ -41,7 +41,7 @@
             <p>Don't have an account? <a onclick="signUp()">Sign up</a></p>
         </div>    
         
-        <div id="register" class="divForm <?= isActiveForm('register', $activeForm)?>">
+        <div id="register" class="divForm <?= isActiveForm('nRegister', $activeForm)?>">
             <h1 class="title">Registro</h1>
             <form method="POST" action="../C/login.php">
                 <?= showError($errors['register'])?>
