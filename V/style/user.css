@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style */
+
+
+header {
+    background-color: #D6AD08;
+    width: 100%;
+}
+
+#navbar {
+    width: fit-content;
+    background-color: #D6AD08;
+}
+
+.textfornav {
+    margin: 10px;
+}
+
+
+
+
+
+
+/* Flexbox */
+
+#navbar {
+    display: flex;
+    justify-content: space-evenly;
+}
