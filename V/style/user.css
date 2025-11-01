@@ -7,20 +7,25 @@
 
 
 header {
-    background-color: #D6AD08;
+    background-color: #E7B511;
     width: 100%;
 }
 
 #navbar {
     width: fit-content;
-    background-color: #D6AD08;
+    background-color: #E7B511;
+    color: white;
 }
 
 .textfornav {
-    margin: 10px;
+    background-color: #E7B511;
+    padding: 10px;
 }
 
-
+.textfornav:hover {
+    height: fit-content;
+    background-color: #E2C15D;
+}
 
 
 
