@@ -3,6 +3,15 @@
     border: 0;
 }
 
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+    font-family: Helvetica;
+    color: #E7B511;
+}
+
 body {
     background-color: white;
 }
@@ -21,6 +30,7 @@ input {
     justify-content: center;
     flex-direction: column;
     height: 100vh;
+    background-color: #E2C15D;
 }
 
 /*CSS for divs*/
@@ -29,8 +39,9 @@ input {
     background-color: white;
     width: fit-content;
     padding: 1em;
-    border: black 0.2em solid;
+    border: #AFB884 0.2em solid;
     border-radius: 1em;
+    background-color: #dccda8;;
 }
 
 
