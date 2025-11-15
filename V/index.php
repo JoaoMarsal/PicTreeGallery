@@ -33,10 +33,12 @@
         <div id="login" class="divForm <?= isActiveForm('nLogin', $activeForm)?>">
             <h1 class="title">Login</h1>
             <form method="POST" action="../C/login.php">
-                <?= showError($errors['login'])?>
-                <input class="formInput" type="text" placeholder="Email" name="nLoginEmail">
-                <input class="formInput" type="password" name="nLoginPassword" placeholder="Password">
-                <button type="submit" name="nLogin" class="button">Get in</button>
+                <div class="formBox">
+                    <?= showError($errors['login'])?>
+                    <input class="formInput" type="text" placeholder="Email" name="nLoginEmail">
+                    <input class="formInput" type="password" name="nLoginPassword" placeholder="Password">
+                </div>
+                    <button type="submit" name="nLogin" class="button">Get in</button>
             </form>
             <p>Don't have an account? <a onclick="signUp()">Sign up</a></p>
         </div>    
@@ -44,10 +46,12 @@
         <div id="register" class="divForm <?= isActiveForm('nRegister', $activeForm)?>">
             <h1 class="title">Registro</h1>
             <form method="POST" action="../C/login.php">
-                <?= showError($errors['register'])?>
-                <input class="formInput" type="text" name="nName" placeholder="User name">
-                <input class="formInput" type="text" name="nEmail" placeholder="E-mail">
-                <input class="formInput" type="password" name="nPassword" placeholder="Password">
+                <div class="formBox">
+                    <?= showError($errors['register'])?>
+                    <input class="formInput" type="text" name="nName" placeholder="User name">
+                    <input class="formInput" type="text" name="nEmail" placeholder="E-mail">
+                    <input class="formInput" type="password" name="nPassword" placeholder="Password">
+                </div>    
                 <button name="nRegister" type="submit" class="button">Sign Up</button>
             </form>
             <p>Already have an account? <a onclick="signUp()">Log in</a></p>

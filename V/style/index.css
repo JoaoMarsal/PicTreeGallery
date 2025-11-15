@@ -5,6 +5,12 @@
 
 p {
     font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin-top: 0.5em;
+}
+
+a {
+    color: #AFB884;
 }
 
 .title {
@@ -41,9 +47,8 @@ input {
     padding: 1em;
     border: #AFB884 0.2em solid;
     border-radius: 1em;
-    background-color: #dccda8;;
+    background-color: #dccda8;
 }
-
 
 .hidden {
     display: none;
@@ -51,16 +56,28 @@ input {
 
 /*CSS for inputs*/
 
+.formBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 8em;
+}
+
 .formInput {
     background-color: white;
-    border: black solid 0.1em;
+    border: #AFB884 solid 0.2em;
     border-radius: 0.2em;
 }
 
+.formInput::placeholder {
+    color: #AFB884
+}
+
 .button {
-    background-color: white;
-    color: black;
-    border: black solid 0.1em;
-    border-radius: 0.2em;
+    background-color: #AFB884;
+    color: white;
+    border: #AFB884 solid 0.1em;
+    border-radius: 0.5em;
     margin-left: 60%;
+    margin-top: 5px;
 }
