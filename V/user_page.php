@@ -24,7 +24,7 @@
     <div id="page">
         <session id="addPhoto">
             <div id="photo">
-                <form id="fileInput" method="post" action="./C/submitPicture.php">
+                <form id="fileInput" method="POST" action="../../C/submitPicture.php">
                     <input type="file" id="inputImage">
                     <label for="imgNameId">Image's name:</label>
                     <input type="text" id="imgNameId" name="imgName" placeholder="Ex: Pretty sunset">
