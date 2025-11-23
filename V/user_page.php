@@ -29,7 +29,7 @@
                     <label for="imgNameId">Image's name:</label>
                     <input type="text" id="imgNameId" name="imgName" placeholder="Ex: Pretty sunset">
                     <label for="imgDescriptionId">Image's description:</label>                
-                    <input name="imgDescription" id="imgDescriptionId" type="text">
+                    <textarea name="imgDescription" id="imgDescriptionId" type="text"></textarea>
                     <label>Core memory?</label>
                     <div><input name="imgType" type="radio" value="core" id="core" name="nCore"><label for="core">Yes, core indeed.</label></div>
                     <div><input name="imgType" type="radio" value="trivial" id="trivial" name="nTrivial"><label for="trivial">No, trivial.</label></div>
