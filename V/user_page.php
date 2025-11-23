@@ -1,6 +1,5 @@
 <?php
     session_start();
-
     $user = $_SESSION['name'];
     $email = $_SESSION['email']
 ?>
@@ -22,8 +21,24 @@
                 <a class="textfornav">Support</a>
         </nav>
     </header>
-    <session></session>
-    <session></session>
+    <div id="page">
+        <session id="addPhoto">
+            <div id="photo">
+                <form id="fileInput" method="post" action="./C/submitPicture.php">
+                    <input type="file" id="inputImage">
+                    <label for="imgNameId">Image's name:</label>
+                    <input type="text" id="imgNameId" name="imgName" placeholder="Ex: Pretty sunset">
+                    <label for="imgDescriptionId">Image's description:</label>                
+                    <input name="imgDescription" id="imgDescriptionId" type="text">
+                    <label>Core memory?</label>
+                    <div><input name="imgType" type="radio" value="core" id="core" name="nCore"><label for="core">Yes, core indeed.</label></div>
+                    <div><input name="imgType" type="radio" value="trivial" id="trivial" name="nTrivial"><label for="trivial">No, trivial.</label></div>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </session>
+        <session id="photos"></session>
+    </div>
     <footer></footer>
 </body>
 </html>

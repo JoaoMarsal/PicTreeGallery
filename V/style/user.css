@@ -28,12 +28,39 @@ header {
     background-color: #E2C15D;
 }
 
-
+#addPhoto {
+    color: white;
+    margin: 5em;
+    padding: 2em;
+    width: 20%;
+    background-color: #E2C15D;
+    border: #E7B511 solid 10px;
+    border-radius: 10px;
+}
 
 
 /* Flexbox */
 
+#page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 #navbar {
     display: flex;
     justify-content: space-evenly;
+}
+
+#addPhoto {
+}
+
+input {
+    margin: 5px;
+}
+
+#fileInput {
+    display: flex;
+    flex-direction: column;
 }
