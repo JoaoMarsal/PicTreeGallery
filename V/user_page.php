@@ -31,9 +31,9 @@
                     <label for="imgDescriptionId">Image's description:</label>                
                     <textarea placeholder="Ex: The first sunset we saw together" name="imgDescription" id="imgDescriptionId" type="text"></textarea>
                     <label>Core memory?</label>
-                    <div><input name="imgType" type="radio" value="core" id="core" name="nCore"><label for="core">Yes, core indeed.</label></div>
-                    <div><input name="imgType" type="radio" value="trivial" id="trivial" name="nTrivial"><label for="trivial">No, trivial.</label></div>
-                    <input type="submit" value="Submit">
+                    <div><input name="imgType" type="radio" value="1" id="core"><label for="core">Yes, core indeed.</label></div>
+                    <div><input name="imgType" type="radio" value="0" id="trivial"><label for="trivial">No, trivial.</label></div>
+                    <input type="submit" value="Submit" name="imageInsert">
                 </form>
             </div>
         </session>
