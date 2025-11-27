@@ -8,7 +8,7 @@ if(isset($_POST['imageInsert'])){
     $core = $_POST['imgType'];
 
     $conn->query("INSERT INTO images(description, type, user) VALUES ('$description', '$core', '$email')");
-    $_SESSION['alertaImagem'] = 'deu certo o bagulho';
+    $_SESSION['alertaImagem'] = 'Image insertion successfull';
     echo $_SESSION['alertaImagem'];
 }
 ?>
