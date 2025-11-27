@@ -9,6 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/user.css">
+    <script src="js/user.js"></script>
     <title>PicTree - Your place for photos</title>
 </head>
 <body>
@@ -25,7 +26,10 @@
         <session id="addPhoto">
             <div id="photo">
                 <form id="fileInput" method="POST" action="../../C/submitPicture.php">
-                    <input type="file" id="inputImage">
+                    <div>
+                        <input type="file" id="inputImage">
+                        <img id="preview">
+                    </div>
                     <label for="imgNameId">Image's name:</label>
                     <input type="text" id="imgNameId" name="imgName" placeholder="Ex: Pretty sunset">
                     <label for="imgDescriptionId">Image's description:</label>                
