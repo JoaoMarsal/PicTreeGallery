@@ -28,6 +28,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=BBH+Hegarty&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/index.css">
     <script src="js/index.js"></script>
 </head>
@@ -38,12 +41,14 @@
             <form method="POST" action="../C/login.php">
                 <div class="formBox">
                     <?= showError($errors['login'])?>
-                    <input class="formInput" type="text" placeholder="Email" name="nLoginEmail">
-                    <input class="formInput" type="password" name="nLoginPassword" placeholder="Password">
-                </div>
+                    <label for="nName">E-mail:</label>
+                    <input class="formInput" type="text" id="nName" placeholder="Email" name="nLoginEmail">
+                    <label for="nLoginPassword">Password:</label>
+                    <input class="formInput" id="nLoginPassword" type="password" name="nLoginPassword" placeholder="Password">
                     <button type="submit" name="nLogin" class="button">Get in</button>
+                    <p>Don't have an account? <a onclick="signUp()">Sign up</a></p>
+                </div>
             </form>
-            <p>Don't have an account? <a onclick="signUp()">Sign up</a></p>
         </div>    
         
         <div id="register" class="divForm <?= isActiveForm('nRegister', $activeForm)?>">
@@ -51,13 +56,16 @@
             <h1 class="title">Registro</h1>
             <div class="formBox">
                     <?= showError($errors['register'])?>
-                    <input class="formInput" type="text" name="nName" placeholder="User name">
-                    <input class="formInput" type="text" name="nEmail" placeholder="E-mail">
-                    <input class="formInput" type="password" name="nPassword" placeholder="Password">
+                    <label for="nName">Username:</label>
+                    <input class="formInput" id="nName" type="text" name="nName" placeholder="User name">
+                    <label for="nEmail">E-mail:</label>
+                    <input class="formInput" id="nEmail" type="text" name="nEmail" placeholder="E-mail">
+                    <label for="nPassword">Password:</label>
+                    <input class="formInput" id="nPassword" type="password" name="nPassword" placeholder="Password">
+                    <button name="nRegister" type="submit" class="button">Sign Up</button>
+                    <p>Already have an account?<a onclick="signUp()">Log in</a></p>
                 </div>    
-                <button name="nRegister" type="submit" class="button">Sign Up</button>
             </form>
-            <p>Already have an account? <a onclick="signUp()">Log in</a></p>
         </div>
     </section>
 </body>

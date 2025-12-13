@@ -9,11 +9,18 @@ body {
 
 p {
     font-family: "BBH Hegarty", sans-serif;
-    color: white;
-    margin-top: 0.5em;
+    color: #E7B511;
+    margin-top: 2em;
+    
 }
 
 a {
+    color: #AFB884;
+    margin-left: 5px;
+}
+
+label {
+    font-family: "Google Sans", sans-serif;
     color: #AFB884;
 }
 
@@ -21,18 +28,16 @@ a {
     font-family: "BBH Hegarty", sans-serif;
     color: #E7B511;
     background-color: white;
+    width: min-content;
+    transform: translateY(-35px) translateX(20px);
     padding-left: 10px;
     padding-right: 10px;
-    width: min-content;
-    margin-left: 10px;
-    transform: translateY(-35px);
 }
-
 
 input {
     display: block;
     margin-bottom: 1em;
-    margin-top: 1em;
+    margin-top: 0.5em;
 }
 
 /*Center*/
@@ -73,8 +78,10 @@ input {
     
 .formInput {
     background-color: white;
-    border: #AFB884 solid 0.2em;
+    border: #AFB884 solid 0.15em;
     border-radius: 0.2em;
+    width: 20em;
+    
 }
 
 .formInput::placeholder {
@@ -86,8 +93,9 @@ input {
     color: white;
     border: #AFB884 solid 0.1em;
     border-radius: 0.5em;
-    margin-left: 60%;
+    margin-left: 18%;
     margin-top: 5px;
+    width: fit-content;
 }
 
 /*
