@@ -25,6 +25,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PicTree - Your place for photos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Hegarty&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/index.css">
     <script src="js/index.js"></script>
 </head>
@@ -44,9 +47,9 @@
         </div>    
         
         <div id="register" class="divForm <?= isActiveForm('nRegister', $activeForm)?>">
-            <h1 class="title">Registro</h1>
             <form method="POST" action="../C/login.php">
-                <div class="formBox">
+            <h1 class="title">Registro</h1>
+            <div class="formBox">
                     <?= showError($errors['register'])?>
                     <input class="formInput" type="text" name="nName" placeholder="User name">
                     <input class="formInput" type="text" name="nEmail" placeholder="E-mail">
