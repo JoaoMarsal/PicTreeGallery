@@ -22,13 +22,15 @@
                 <a class="textfornav">Support</a>
         </nav>
     </header>
+            <button onclick="updatePreview()" value="asdas">
+
     <div id="page">
         <session id="addPhoto">
             <div id="photo">
                 <form id="fileInput" method="POST" action="../../C/submitPicture.php">
                     <div>
-                        <input type="file" id="inputImage">
-                        <img id="preview">
+                        <input type="file" name="imgFile" id="inputImage" accept=".png, .jpeg, .jpg">
+                        
                     </div>
                     <label for="imgNameId">Image's name:</label>
                     <input type="text" id="imgNameId" name="imgName" placeholder="Ex: Pretty sunset">
