@@ -7,7 +7,7 @@ if(isset($_POST['imageInsert'])){
     $email = $_SESSION['email'];
     $core = $_POST['imgType'];
 
-    $conn->query("INSERT INTO images(description, type, user) VALUES ('$description', '$core', '$email')");
+    $conn->query("INSERT INTO images(description, type, user) VALUES ('$description', '$core', '$email')"); //Added url column in table
     $_SESSION['alertaImagem'] = 'Image insertion successfull';
     echo $_SESSION['alertaImagem'];
 }
