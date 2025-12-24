@@ -21,3 +21,7 @@ function updatePreview(){
 
 input.addEventListener("change", updatePreview);
 
+function saveFile(){
+            var inputContent = document.getElementById("inputImage");
+            console.log(inputContent.value);
+        }

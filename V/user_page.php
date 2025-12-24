@@ -37,7 +37,8 @@
                     <label>Core memory?</label>
                     <div><input name="imgType" type="radio" value="1" id="core"><label for="core">Yes, core indeed.</label></div>
                     <div><input name="imgType" type="radio" value="0" id="trivial"><label for="trivial">No, trivial.</label></div>
-                    <input type="submit" onclick="saveFile()" value="Submit" name="imageInsert">
+                    <input type="submit" value="Submit" name="imageInsert">
+                    <img onclick="saveFile()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ1KXczcUc092yxpQuuzYTlNN6FHQbZOhfGA&s">
                 </form>
             </div>
         </session>
