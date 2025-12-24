@@ -37,13 +37,14 @@
                     <label>Core memory?</label>
                     <div><input name="imgType" type="radio" value="1" id="core"><label for="core">Yes, core indeed.</label></div>
                     <div><input name="imgType" type="radio" value="0" id="trivial"><label for="trivial">No, trivial.</label></div>
-                    <input type="submit" value="Submit" name="imageInsert">
+                    <input type="submit" onclick="saveFile()" value="Submit" name="imageInsert">
                 </form>
             </div>
         </session>
         <session id="photos"></session>
     </div>
     <footer></footer>
-    <script src="js/user.js"></script>
+    <script src="js/user.js">
+    </script>
 </body>
 </html>
