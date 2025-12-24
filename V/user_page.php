@@ -24,7 +24,7 @@
     <div id="page">
         <session id="addPhoto">
             <div id="photo">
-            <form id="fileInput" method="POST" action="../../C/submitPicture.php">
+            <form id="fileInput" method="POST" action="../../C/submitPicture.php" enctype="multipart/form-data">
                     <div>
                         <input type="file" name="imgFile" id="inputImage" accept=".png, .jpeg, .jpg">
                         <div id="diagnosis">
