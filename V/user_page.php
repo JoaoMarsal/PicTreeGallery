@@ -1,7 +1,10 @@
 <?php
     session_start();
     $user = $_SESSION['name'];
-    $email = $_SESSION['email']
+    $email = $_SESSION['email'];
+
+    $error = $_SESSION['insuficientInput'];
+    echo $error;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
