@@ -26,17 +26,17 @@
             <div id="photo">
             <form id="fileInput" method="POST" action="../../C/submitPicture.php" enctype="multipart/form-data">
                     <div>
-                        <input type="file" name="imgFile" id="inputImage" accept=".png, .jpeg, .jpg">
+                        <input type="file" name="imgFile" id="inputImage" accept=".png, .jpeg, .jpg" required>
                         <div id="diagnosis">
                         </div>
                     </div>
                     <label for="imgNameId">Image's name:</label>
-                    <input type="text" id="imgNameId" name="imgName" placeholder="Ex: Pretty sunset">
+                    <input type="text" id="imgNameId" name="imgName" placeholder="Ex: Pretty sunset" required>
                     <label for="imgDescriptionId">Image's description:</label>                
                     <textarea placeholder="Ex: The first sunset we saw together" name="imgDescription" id="imgDescriptionId" type="text"></textarea>
                     <label>Core memory?</label>
-                    <div><input name="imgType" type="radio" value="1" id="core"><label for="core">Yes, core indeed.</label></div>
-                    <div><input name="imgType" type="radio" value="0" id="trivial"><label for="trivial">No, trivial.</label></div>
+                    <div><input name="imgType" type="radio" value="1" id="core" required><label for="core">Yes, core indeed.</label></div>
+                    <div><input name="imgType" type="radio" value="0" id="trivial" required><label for="trivial">No, trivial.</label></div>
                     <input type="submit" value="Submit" name="imageInsert">
                     <img onclick="saveFile()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ1KXczcUc092yxpQuuzYTlNN6FHQbZOhfGA&s">
                 </form>
