@@ -4,10 +4,10 @@
     $password = "";
     $database = "images_db";
 
-    $conn = new mysqli($host, $user, $password, $database);
+    $connImages = new mysqli($host, $user, $password, $database);
 
-    if($conn -> connect_error){
-        die("Connection faliled: ". $conn->connect_error);
+    if($connImages -> connect_error){
+        die("Connection faliled: ". $connImages->connect_error);
     } else {
         echo 'connection successful';
     }

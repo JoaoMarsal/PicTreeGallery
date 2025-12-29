@@ -8,30 +8,33 @@ if(isset($_POST['imageInsert'])){
     $email = $_SESSION['email'];
     $core = $_POST['imgType'];
     $name = $_POST['imgName'];
+    
     //Image manipulation
-
     $img = $_FILES['imgFile']['tmp_name']; //Getting the input from the input element
     $imgExt = pathinfo($_FILES['imgFile']['name'], PATHINFO_EXTENSION); //Get image extension
 
     //Checking for inputs values
-    if($img === ''){
-        $_SESSION['insuficientInput'] = 'image';
-        header('Location ../V/user_page.php');
-        exit();
-    }
-    if($name === ''){
-        $_SESSION['insuficientInput'] = 'name';
+    if($_FILES['imgFile']['error'] === UPLOAD_ERR_NO_FILE){
+        $_SESSION['insuficientInput'] = 'imageNotUploaded';
         header('Location: ../V/user_page.php');
         exit();
-    } else if($core !== 0 || $core !== 1){
-        $_SESSION['insuficientInput'] = 'core';
+    } else if(!($imgExt == 'png' or $imgExt == 'jpeg' or $imgExt == 'jpg')){
+        $_SESSION['insuficientInput'] = 'invalidFileType';
+        header('Location: ../V/user_page.php');
+        exit();
+    } else if($name === ''){
+        $_SESSION['insuficientInput'] = 'nameNotUploaded';
         header('Location: ../V/user_page.php');
         exit();
     } else if($email === ''){
-        $_SESSION['insuficientInput'] = 'noEmail';
+        $_SESSION['insuficientInput'] = 'unregisteredEmail';
         header('Location: ../V/user_page.php');
         exit();
-    }
+    } else if(!($core == "0" or $core == "1")){
+        $_SESSION['insuficientInput'] = 'coreNotUploaded';
+        header('Location: ../V/user_page.php');
+        exit();
+    } 
     //Email used exists
     $emailCheck = $conn->query("SELECT * FROM `users` where email = '$email';");
     if($emailCheck->num_rows < 1){
