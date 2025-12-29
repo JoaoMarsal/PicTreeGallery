@@ -48,7 +48,8 @@ if(isset($_POST['imageInsert'])){
     move_uploaded_file($img, "../$imgURL"); //Moving the input to a folder
     
     $connImages->query("INSERT INTO images(name, description, user_email, type, path) VALUES ('$name', '$description', '$email', '$core', '$imgURL')"); //Added url column in table
-    $_SESSION['alertaImagem'] = 'Image insertion successfull';
-    echo $_SESSION['alertaImagem'];
+    $_SESSION['alertImage'] = 'Image insertion successfull';
+    header('Location: ../V/user_page.php');
+    exit();
 }
 ?>

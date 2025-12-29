@@ -2,10 +2,20 @@
     session_start();
     $user = $_SESSION['name'];
     $email = $_SESSION['email'];
-
     if(isset($_SESSION['insuficientInput'])){
         $error = $_SESSION['insuficientInput'];
-        echo $error;
+    } else {
+        $error = '';
+    } 
+    
+    if(isset($_SESSION['alertImage'])){
+        $result = $_SESSION['alertImage'];
+    }
+
+    //Function for showing errors of input
+
+    function inputError($error){
+        return !empty($error) ? "<div id='errorBox'><p>You didn't properly fill in your image data. <br> Error: $error.</p>" : '';
     }
 ?>
 <!DOCTYPE html>
@@ -28,7 +38,8 @@
     </header>
     <div id="page">
         <session id="addPhoto">
-            <div id="photo">
+        <?= inputError($error)?>
+        <div id="photo">
             <form id="fileInput" method="POST" action="../../C/submitPicture.php" enctype="multipart/form-data">
                     <div>
                         <input type="file" name="imgFile" id="inputImage" accept=".png, .jpeg, .jpg" required>
