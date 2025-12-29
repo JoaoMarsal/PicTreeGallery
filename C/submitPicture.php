@@ -15,30 +15,30 @@ if(isset($_POST['imageInsert'])){
 
     //Checking for inputs values
     if($_FILES['imgFile']['error'] === UPLOAD_ERR_NO_FILE){
-        $_SESSION['insuficientInput'] = 'imageNotUploaded';
+        $_SESSION['insuficientInput'] = "Something went wrong with image input.";
         header('Location: ../V/user_page.php');
         exit();
     } else if(!($imgExt == 'png' or $imgExt == 'jpeg' or $imgExt == 'jpg')){
-        $_SESSION['insuficientInput'] = 'invalidFileType';
+        $_SESSION['insuficientInput'] = 'Invalid file type.';
         header('Location: ../V/user_page.php');
         exit();
     } else if($name === ''){
-        $_SESSION['insuficientInput'] = 'nameNotUploaded';
+        $_SESSION['insuficientInput'] = "Didn't specify image name.";
         header('Location: ../V/user_page.php');
         exit();
     } else if($email === ''){
-        $_SESSION['insuficientInput'] = 'unregisteredEmail';
+        $_SESSION['insuficientInput'] = "Something is wrong with the session's e-mail";
         header('Location: ../V/user_page.php');
         exit();
     } else if(!($core == "0" or $core == "1")){
-        $_SESSION['insuficientInput'] = 'coreNotUploaded';
+        $_SESSION['insuficientInput'] = "Didn't specify image core.";
         header('Location: ../V/user_page.php');
         exit();
     } 
     //Email used exists
     $emailCheck = $conn->query("SELECT * FROM `users` where email = '$email';");
     if($emailCheck->num_rows < 1){
-        $_SESSION['insuficientInput'] = 'unregisteredEmail';
+        $_SESSION['insuficientInput'] = "E-mail not registered";
         header('Location: ../V/user_page.php');
         exit();
     }

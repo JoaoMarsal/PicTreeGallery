@@ -45,6 +45,15 @@ header {
     max-height: 15em;
 }
 
+#errorBox {
+    background-color: rgb(251, 172, 172);
+    color: rgb(200, 103, 103);
+    border: rgb(200, 103, 103) 2px solid;
+    border-radius: 5px;
+    outline: solid rgb(251, 172, 172);
+    padding: 10px;
+}
+
 /* Flexbox */
 
 #page {

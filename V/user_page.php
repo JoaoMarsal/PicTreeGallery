@@ -15,7 +15,7 @@
     //Function for showing errors of input
 
     function inputError($error){
-        return !empty($error) ? "<div id='errorBox'><p>You didn't properly fill in your image data. <br> Error: $error.</p>" : '';
+        return !empty($error) ? "<div id='errorBox'><p>You didn't properly fill in your image data. <br> Error: $error.</p></div>" : '';
     }
 ?>
 <!DOCTYPE html>
@@ -54,7 +54,6 @@
                     <div><input name="imgType" type="radio" value="1" id="core" required><label for="core">Yes, core indeed.</label></div>
                     <div><input name="imgType" type="radio" value="0" id="trivial" required><label for="trivial">No, trivial.</label></div>
                     <input type="submit" value="Submit" name="imageInsert">
-                    <img onclick="saveFile()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ1KXczcUc092yxpQuuzYTlNN6FHQbZOhfGA&s">
                 </form>
             </div>
         </session>
