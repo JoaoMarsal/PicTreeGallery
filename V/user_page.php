@@ -23,7 +23,6 @@
         </nav>
     </header>
     <div id="page">
-        <session id="addPhoto">
             <div id="photo">
                 <form id="fileInput" method="POST" action="../../C/submitPicture.php">
                     <div>
@@ -40,7 +39,6 @@
                     <input type="submit" value="Submit" name="imageInsert">
                 </form>
             </div>
-        </session>
         <session id="photos"></session>
     </div>
     <footer></footer>
