@@ -29,8 +29,8 @@ header {
 
 #imgDescriptionId {
     height: 35px;
-    max-width: 100%;
-    min-width: 100%;
+    max-width: 50%;
+    min-width: 50%;
     min-height: 6em;
     max-height: 15em;
 }
@@ -44,7 +44,23 @@ header {
     padding: 10px;
 }
 
+#imgDiv{
+}
+
+#inputImage{
+    display: none;
+}
+
+#imgInputStraw{
+    background-color: white;
+}
+
 /* Flexbox */
+
+#addPhoto {
+    width: 100%;
+    margin: 1.5em;
+}
 
 #page {
     display: flex;
@@ -52,7 +68,6 @@ header {
 }
 
 #photo {
-    margin: 3em;
     background-color: #AFB884;
     width: 100%;
 }
@@ -63,10 +78,15 @@ header {
 }
 
 input {
-    margin: 5px;
 }
 
 #fileInput {
     display: flex;
     flex-direction: column;
+}
+
+#flex-img-name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }

@@ -41,13 +41,18 @@
         <?= inputError($error)?>
         <div id="photo">
             <form id="fileInput" method="POST" action="../../C/submitPicture.php" enctype="multipart/form-data">
-                    <div>
-                        <input type="file" name="imgFile" id="inputImage" accept=".png, .jpeg, .jpg" required>
-                        <div id="diagnosis">
+                    <div id="flex-img-name">
+                        <div id="imgDiv">
+                            <label for="inputImage" id="imgInputStraw">Insert image to be stored here</label>
+                            <input type="file" name="imgFile" id="inputImage" accept=".png, .jpeg, .jpg" required>
+                        <div id="diagnosis"></div>
+                        </div>
+                        <div>
+                            <div for="imgNameId">Image's name:
+                                <input type="text" id="imgNameId" name="imgName" placeholder="Ex: Pretty sunset" required>
+                            </div>
                         </div>
                     </div>
-                    <label for="imgNameId">Image's name:</label>
-                    <input type="text" id="imgNameId" name="imgName" placeholder="Ex: Pretty sunset" required>
                     <label for="imgDescriptionId">Image's description:</label>                
                     <textarea placeholder="Ex: The first sunset we saw together" name="imgDescription" id="imgDescriptionId" type="text"></textarea>
                     <label>Core memory?</label>
