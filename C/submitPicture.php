@@ -15,7 +15,7 @@ if(isset($_POST['imageInsert'])){
 
     //Checking for inputs values
     if($_FILES['imgFile']['error'] === UPLOAD_ERR_NO_FILE){
-        $_SESSION['insuficientInput'] = "Something went wrong with image input.";
+        $_SESSION['insuficientInput'] = "Something went wrong with image input";
         header('Location: ../V/user_page.php');
         exit();
     } else if(!($imgExt == 'png' or $imgExt == 'jpeg' or $imgExt == 'jpg')){
@@ -23,7 +23,7 @@ if(isset($_POST['imageInsert'])){
         header('Location: ../V/user_page.php');
         exit();
     } else if($name === ''){
-        $_SESSION['insuficientInput'] = "Didn't specify image name.";
+        $_SESSION['insuficientInput'] = "Didn't specify image name";
         header('Location: ../V/user_page.php');
         exit();
     } else if($email === ''){
@@ -31,7 +31,7 @@ if(isset($_POST['imageInsert'])){
         header('Location: ../V/user_page.php');
         exit();
     } else if(!($core == "0" or $core == "1")){
-        $_SESSION['insuficientInput'] = "Didn't specify image core.";
+        $_SESSION['insuficientInput'] = "Didn't specify image core";
         header('Location: ../V/user_page.php');
         exit();
     } 
