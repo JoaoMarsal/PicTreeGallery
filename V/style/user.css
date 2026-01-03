@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Google Sans", Arial, Helvetica, sans-serif;
 }
 
 /* Style */
@@ -28,11 +28,8 @@ header {
 }
 
 #imgDescriptionId {
-    height: 35px;
-    max-width: 50%;
-    min-width: 50%;
-    min-height: 6em;
-    max-height: 15em;
+    resize: none;
+    height: 10em;
 }
 
 #errorBox {
@@ -45,6 +42,12 @@ header {
 }
 
 #imgDiv{
+    height: 20em;
+    width: 20em;
+    background-color: #b3bd88;
+    border: #6b9063 solid 3px;
+    margin-right: 1em;
+    border-radius: 1em;
 }
 
 #inputImage{
@@ -52,14 +55,49 @@ header {
 }
 
 #imgInputStraw{
-    background-color: white;
+    background-color: #b3bd88;
+    font-family: "BBH Hegarty", sans-serif;
+    color: #6b9063;
+    width: 50%;
+    text-align: center;
+}
+
+.insert {
+    display: block;
+    background-color: #b3bd88;
+    border: solid 3px #6b9063;
+    border-radius: 1em;
+    color: #6b9063;
+    padding: 0.2em;
+    width: 90%;
+}
+
+#photo {
+    border: #6b9063 solid 3px;
+    padding: 1em;
+    background-color: #AFB884;
+    border-radius: 1em;
+}
+
+input[type="radio"]{
+    background-color: #6b9063;
 }
 
 /* Flexbox */
 
+#imgDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #addPhoto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    margin: 1.5em;
 }
 
 #page {
@@ -68,8 +106,8 @@ header {
 }
 
 #photo {
-    background-color: #AFB884;
-    width: 100%;
+    width: fit-content;
+    margin: 1.5em;
 }
 
 #navbar {
@@ -78,15 +116,22 @@ header {
 }
 
 input {
+    
 }
 
 #fileInput {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
-#flex-img-name{
+#flex-img{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+#flex-rest{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
