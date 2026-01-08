@@ -83,6 +83,21 @@ input[type="radio"]{
     background-color: #6b9063;
 }
 
+#line {
+    background-color: #b3bd88;
+    border: none;
+    height: 1em;
+}
+
+#title {
+    background-color: white;
+    font-family: "BBH Hegarty", sans-serif;
+    padding: 0.5em;
+    position: absolute;
+    transform: translateY(-1.3em) translateX(1em);
+    color: #b3bd88
+}
+
 /* Flexbox */
 
 #imgDiv {
@@ -102,6 +117,7 @@ input[type="radio"]{
 
 #page {
     display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
