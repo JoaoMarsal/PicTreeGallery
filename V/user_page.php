@@ -76,7 +76,7 @@
                 <h1 id="title">Explore more pictures</h1>
             </div>  
             <div id="imgRepository">
-                
+            
             </div>             
         </session>
     </div>
