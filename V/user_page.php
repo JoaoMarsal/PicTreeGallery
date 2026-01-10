@@ -29,7 +29,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
     <title>PicTree - Your place for photos</title>
 </head>
-<body>
+<body onload="imgGeneration()">
     <header>
         <nav id="navbar">
                 <a class="textfornav">Home</a>
@@ -76,7 +76,9 @@
                 <h1 id="title">Explore more pictures</h1>
             </div>  
             <div id="imgRepository">
-            
+                <div id="imgs">
+                    
+                </div>
             </div>             
         </session>
     </div>

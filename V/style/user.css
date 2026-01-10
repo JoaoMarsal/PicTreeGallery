@@ -4,6 +4,11 @@
     font-family: "Google Sans", Arial, Helvetica, sans-serif;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 /* Style */
 
 header {
@@ -92,9 +97,11 @@ input[type="radio"]{
 #title {
     background-color: white;
     font-family: "BBH Hegarty", sans-serif;
-    padding: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0.2em;
     position: absolute;
-    transform: translateY(-1.3em) translateX(1em);
+    transform: translateY(-0.87em) translateX(1em);
     color: #b3bd88
 }
 
@@ -151,3 +158,25 @@ input {
     flex-direction: column;
     justify-content: space-around;
 }
+
+#imgs{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 1em;
+
+}
+
+/* Just wanted to note an alternative way to do imgs img but without js
+
+#imgs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+#imgs img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+*/
