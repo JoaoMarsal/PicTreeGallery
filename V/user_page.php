@@ -2,6 +2,8 @@
     session_start();
     $user = $_SESSION['name'];
     $email = $_SESSION['email'];
+    $imgsLength = $GLOBALS['imgNumbers'];
+
     if(isset($_SESSION['insuficientInput'])){
         $error = $_SESSION['insuficientInput'];
     } else {
@@ -84,6 +86,9 @@
     </div>
     <footer></footer>
     <script src="js/user.js">
+        var globalPHP = <?php ?>
+        var numberImgs = <?php echo $imgsLength?>
+
     </script>
 </body>
 </html>
