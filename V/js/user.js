@@ -31,6 +31,7 @@ function saveFile(){
 
 function imgGeneration(){
     var imgs = document.querySelector("#imgs")
+    console.log(numberImgs);
     var imgSize = `${(document.body.clientWidth) / (2 * numberImgs)}`
     var imgList = []
 

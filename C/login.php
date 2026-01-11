@@ -2,6 +2,10 @@
     session_start();
     require_once '../M/config.php';
     
+    require_once 'imgRandomSet.php';
+
+
+
     if(isset($_POST['nRegister'])){
         $name = $_POST['nName'];
         $email = $_POST['nEmail'];

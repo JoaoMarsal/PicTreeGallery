@@ -2,7 +2,10 @@
     session_start();
     $user = $_SESSION['name'];
     $email = $_SESSION['email'];
-    $imgsLength = $GLOBALS['imgNumbers'];
+    $imgsLength = $_SESSION['imgNumbers'];
+    $imgsPath = $_SESSION['imgsPath'];
+
+    
 
     if(isset($_SESSION['insuficientInput'])){
         $error = $_SESSION['insuficientInput'];
@@ -85,10 +88,15 @@
         </session>
     </div>
     <footer></footer>
-    <script src="js/user.js">
-        var globalPHP = <?php ?>
-        var numberImgs = <?php echo $imgsLength?>
-
+    
+    <?php echo var_dump($imgsPath) ?>
+    <script>
+        var numberImgs= <?= json_encode($imgsLength) ?>
+        //Passing values for path array
+        var paths = [numberImgs]
     </script>
+    <script src="js/user.js">
+    </script>
+
 </body>
 </html>
