@@ -89,11 +89,19 @@
     </div>
     <footer></footer>
     
-    <?php echo var_dump($imgsPath) ?>
+    <?php 
+    ?>
     <script>
-        var numberImgs= <?= json_encode($imgsLength) ?>
+        var numberImgs= <?= json_encode($imgsLength) ?>;
         //Passing values for path array
-        var paths = [numberImgs]
+        var paths = [
+            <?php 
+                foreach($imgsPath as $path){
+                    echo "'$path', ";
+                }; 
+            ?>
+            ];
+        console.log(paths);
     </script>
     <script src="js/user.js">
     </script>
