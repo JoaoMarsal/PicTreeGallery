@@ -9,6 +9,6 @@
     if($connImages -> connect_error){
         die("Connection faliled: ". $connImages->connect_error);
     } else {
-        echo 'connection successful';
     }
 ?>
+

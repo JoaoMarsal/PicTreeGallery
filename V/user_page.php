@@ -1,5 +1,7 @@
 <?php
     session_start();
+    require_once '../C/imgRandomSet.php';
+
     $user = $_SESSION['name'];
     $email = $_SESSION['email'];
     $imgsLength = $_SESSION['imgNumbers'];
@@ -101,7 +103,6 @@
                 }; 
             ?>
             ];
-        console.log(paths);
     </script>
     <script src="js/user.js">
     </script>

@@ -37,6 +37,7 @@ function imgGeneration(){
 
     for(let j = 0; j < numberImgs; j++){
         var img = document.createElement("img")
+        img.style = "object-fit: cover;"
         img.src = "../../" + paths[j]; 
         img.width = imgSize
         img.height = imgSize
