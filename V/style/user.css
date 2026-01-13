@@ -11,27 +11,6 @@ body {
 
 /* Style */
 
-header {
-    background-color: #AFB884;
-    width: 100%;
-}
-
-#navbar {
-    width: fit-content;
-    background-color: #AFB884;
-    color: white;
-}
-
-.textfornav {
-    background-color: #AFB884;
-    padding: 10px;
-}
-
-.textfornav:hover {
-    height: fit-content;
-    background-color: #b3bd88;
-}
-
 #imgDescriptionId {
     resize: none;
     height: 10em;
@@ -166,6 +145,34 @@ input {
     margin-top: 1em;
 
 }
+
+/* Dropdown nav content */
+
+header {
+    background-color: #AFB884;
+    width: 100%;
+}
+
+#navbar {
+    width: fit-content;
+    background-color: #AFB884;
+    color: white;
+}
+
+.textfornav {
+    background-color: #AFB884;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-family: "Google Sans", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.textfornav:hover {
+    height: fit-content;
+    background-color: #b3bd88;
+}
+
 
 /* Just wanted to note an alternative way to do imgs img but without js
 
