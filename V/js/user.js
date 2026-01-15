@@ -18,8 +18,17 @@ function updatePreview(){
 
     //img.style.width = "50px";
     //img.style.height = "50px";
-    tips.style = "opacity: 0;"
-    box.style = "background-image: url(" + URL.createObjectURL(files[0]) + "); background-size: cover;" 
+
+    let validType = ["/png", "/jpeg", "/jpg"];
+    let found = validType.some(fileTypes => files[0].type.includes(fileTypes))
+    console.log(found);
+    if(found) {
+        tips.style = "opacity: 0;"
+        box.style = "background-image: url(" + URL.createObjectURL(files[0]) + "); background-size: cover;" 
+    } else {
+        tips.style = "opacity: 100%"
+        box.style = "background-image: ''; background-size: auto"
+    }
     //preview.appendChild(img)
 
 
