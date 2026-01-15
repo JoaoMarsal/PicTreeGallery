@@ -21,7 +21,6 @@ function updatePreview(){
 
     let validType = ["/png", "/jpeg", "/jpg"];
     let found = validType.some(fileTypes => files[0].type.includes(fileTypes))
-    console.log(found);
     if(found) {
         tips.style = "opacity: 0;"
         box.style = "background-image: url(" + URL.createObjectURL(files[0]) + "); background-size: cover;" 
@@ -47,7 +46,6 @@ function saveFile(){
 
 function imgGeneration(){
     var imgs = document.querySelector("#imgs")
-    console.log(numberImgs);
     var imgSize = `${(document.body.clientWidth) / (2 * numberImgs)}`
     var imgList = []
 
