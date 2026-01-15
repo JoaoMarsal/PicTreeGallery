@@ -4,10 +4,9 @@
 
     $user = $_SESSION['name'];
     $email = $_SESSION['email'];
+    $role = $_SESSION['role'];
     $imgsLength = $_SESSION['imgNumbers'];
     $imgsPath = $_SESSION['imgsPath'];
-
-    
 
     if(isset($_SESSION['insuficientInput'])){
         $error = $_SESSION['insuficientInput'];
