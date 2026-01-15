@@ -25,13 +25,19 @@ body {
     padding: 10px;
 }
 
-#imgDiv{
+#imgDiv {
     height: 20em;
     width: 20em;
     background-color: #b3bd88;
     border: #6b9063 solid 3px;
     margin-right: 1em;
     border-radius: 1em;
+}
+
+#imgDivActive {
+    background-color: transparent;
+    background-image: url("https://png.pngtree.com/png-clipart/20250118/original/pngtree-golden-retriever-dog-pictures-png-image_20183713.png");
+    background-size: contain;
 }
 
 #inputImage{
@@ -138,12 +144,16 @@ input {
     justify-content: space-around;
 }
 
-#imgs{
+#imgs {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
-    margin-top: 1em;
+    margin-top: 3em;
+}
 
+#imgs img {
+    border-radius: 10px;
+    border: #AFB884 solid 3px;
 }
 
 /* Dropdown nav content */

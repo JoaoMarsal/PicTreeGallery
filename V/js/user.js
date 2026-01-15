@@ -1,20 +1,27 @@
 const input = document.querySelector("#inputImage");
-const preview = document.getElementById("diagnosis");
+//const preview = document.getElementById("diagnosis");
+const box = document.getElementById("imgDiv")
+const tips = document.getElementById("imgInputStraw")
 
 function updatePreview(){
-    while (preview.firstChild) {
-        preview.removeChild(preview.firstChild);
-    }
+    //while (preview.firstChild) {
+    //    preview.removeChild(preview.firstChild);
+    //}
 
-    const img = document.createElement("img")
+    //Comments: leftovers on how to do a separate image appear as preview
+
+    //const img = document.createElement("img")
 
     const files = input.files;
 
-    img.src = URL.createObjectURL(files[0])
+    //img.src = URL.createObjectURL(files[0])
 
-    img.style.width = "50px";
-    img.style.height = "50px"; 
-    preview.appendChild(img)
+    //img.style.width = "50px";
+    //img.style.height = "50px";
+    tips.style = "opacity: 0;"
+    box.style = "background-image: url(" + URL.createObjectURL(files[0]) + "); background-size: cover;" 
+    //preview.appendChild(img)
+
 
 
 }

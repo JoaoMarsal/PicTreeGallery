@@ -52,7 +52,7 @@
         <div id="photo">
             <form id="fileInput" method="POST" action="../../C/submitPicture.php" enctype="multipart/form-data">
                     <div id="flex-img">
-                        <div id="imgDiv">
+                        <div id="imgDiv" for="inputImage">
                             <label for="inputImage" id="imgInputStraw">Insert image to be stored here</label>
                             <input type="file" name="imgFile" id="inputImage" accept=".png, .jpeg, .jpg" required>
                         <div id="diagnosis"></div>
