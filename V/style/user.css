@@ -121,6 +121,7 @@ input[type="radio"]{
 #navbar {
     display: flex;
     justify-content: space-evenly;
+    cursor: pointer;
 }
 
 input {
