@@ -36,23 +36,9 @@
     <title>PicTree - Your place for photos</title>
 </head>
 <body onload="imgGeneration()">
-    <header>
-        <nav id="navbar">
-                <a class="textfornav">Home</a>
-                <a class="textfornav">Explore</a>
-                <div class="textfornav dropdownMe">Me
-                    <div class="dropdownMe-content">
-                        <ul>
-                            <li><a href="https://www.w3schools.com/csS/css_list.asp">My Gallery</a></li>
-                            <li><a>Profile</a></li>
-                            <li><a>Change account</a></li>    
-                        </ul>
-                    </div>
-                </div>
-                <a class="textfornav">About us</a>
-                <a class="textfornav">Support</a>
-        </nav>
-    </header>
+    <?php 
+        include 'navbar.php';
+    ?>
     <div id="page">
         <session id="addPhoto">
         <?= inputError($error)?>
