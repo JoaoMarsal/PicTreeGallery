@@ -184,6 +184,32 @@ header {
     background-color: #b3bd88;
 }
 
+.dropdownMe-content {
+    display: none;
+    position: fixed;
+    background-color: #AFB884;
+    width: auto;
+    height: auto;
+    transform: translateY(0.5em) translateX(-0.6em);
+}
+
+li {
+    list-style-type: none;
+    padding: 5px;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+}
+
+li:hover {
+    background-color: #b3bd88;
+}
+
+.dropdownMe:hover .dropdownMe-content {
+    display: block;
+}
 
 /* Just wanted to note an alternative way to do imgs img but without js
 
