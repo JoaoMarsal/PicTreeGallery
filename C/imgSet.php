@@ -1,5 +1,3 @@
 <?php 
-    require_once '/M/user_gallery.php';
-    
-    echo 'hello world'
+    require_once '../../M/configImage.php';
 ?>

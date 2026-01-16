@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require '../../C/imgSet.php';
+    require_once '../../C/imgSet.php';
 
     $name = $_SESSION['name'];
     $email = $_SESSION['email'];
