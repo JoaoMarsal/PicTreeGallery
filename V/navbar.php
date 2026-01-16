@@ -17,7 +17,7 @@
                 <div class="textfornav dropdownMe">Me
                     <div class="dropdownMe-content">
                         <ul>
-                            <li><a href="Me/user_gallery.php">My Gallery</a></li>
+                            <li><a href="/V/Me/user_gallery.php">My Gallery</a></li>
                             <li><a>Profile</a></li>
                             <li><a>Change accounts</a></li>    
                         </ul>

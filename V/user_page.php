@@ -8,6 +8,14 @@
     $imgsLength = $_SESSION['imgNumbers'];
     $imgsPath = $_SESSION['imgsPath'];
 
+    if(!isset($_SESSION['email'])){ //Separate verifications, seeing if all is right with session
+        header('Location: ../index.php');
+    } else if(!isset($_SESSION['role'])){
+        header('Location: ../index.php');
+    } else if(!isset($_SESSION['name'])){
+        header('Location: ../index.php');
+    }
+
     if(isset($_SESSION['insuficientInput'])){
         $error = $_SESSION['insuficientInput'];
     } else {
