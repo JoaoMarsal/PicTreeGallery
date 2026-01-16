@@ -1,5 +1,7 @@
 <?php
     session_start();
+    require '../../C/imgSet.php';
+
     $name = $_SESSION['name'];
     $email = $_SESSION['email'];
     $role = $_SESSION['role'];
