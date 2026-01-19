@@ -22,8 +22,49 @@
     margin: 1em;
 }
 
-.boxTitle {
-    margin-bottom: 2em;
+#filterTitle {
+    color: #AFB884;
 }
 
+#searchBox {
+    border: solid 2px #AFB884;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 1em;
+}
+
+#searchBox img {
+    margin-left: 5px;
+    
+}
+
+#nameSearch {
+    border: none;
+    border-left: black solid 1px;
+    padding-left: 5px;
+    margin-right: 5px;
+    background-color: none;
+}
+
+.boxTitle {
+    margin-bottom: 2em;
+    display: block;
+}
+
+#filterBox {
+    margin: 2em;
+    width: 50%;
+}
+
+#type {
+    margin-top: 1em;
+}
+
+/* Flexbox */
+
+#filterBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 

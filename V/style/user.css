@@ -212,6 +212,11 @@ li:hover {
     display: block;
 }
 
+@media (max-width: 528px) {
+    #title {
+        font-size: 20px;
+    }
+}
 /* Just wanted to note an alternative way to do imgs img but without js
 
 #imgs {
