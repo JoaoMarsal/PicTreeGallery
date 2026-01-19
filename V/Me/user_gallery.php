@@ -13,6 +13,8 @@
     } else if(!isset($_SESSION['name'])){
         header('Location: ../../index.php');
     }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -31,12 +33,25 @@
     ?>
     <div id="pageGallery">
         <session>
-            <div>
+            <div class="boxTitle">
                 <hr id="line">
                 <h1 id="title">Explore your saved pictures!</h1>
             </div>
+            <div id="UserImages" onload="callImages()">
+            
+            </div>
         </session>
     </div>
+    <script>
+        var paths = [
+            <?php 
+            foreach($getImgs as $key => $value){
+                echo '"'.$getImgs[$key]['path'].'", ';
+            }
+            ?>
+        ];
+        console.log(paths)
+    </script>
     <script src="../js/userGallery.js"></script>
 </body>
 </html>
