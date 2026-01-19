@@ -10,7 +10,20 @@
     margin: 1em 0 0 0;
 }
 
+#UserImages {
+    margin: 1em;
+    height: 10em;
+    overflow-y: scroll;
+}
+
+#UserImages img {
+    border: solid 3px #b3bd88;
+    border-radius: 5px;
+    margin: 1em;
+}
+
 .boxTitle {
     margin-bottom: 2em;
 }
+
 

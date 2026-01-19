@@ -27,7 +27,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
     <title>PicTree - Your place for photos</title>
 </head>
-<body>
+<body onload="callImages()">
     <?php
         include '../navbar.php';
     ?>
@@ -37,9 +37,10 @@
                 <hr id="line">
                 <h1 id="title">Explore your saved pictures!</h1>
             </div>
-            <div id="UserImages" onload="callImages()">
-            
+            <div id="UserImages">
+
             </div>
+            <hr id="line">
         </session>
     </div>
     <script>
@@ -50,7 +51,8 @@
             }
             ?>
         ];
-        console.log(paths)
+
+        var imgSize = <?php echo $imgsSize ?>;
     </script>
     <script src="../js/userGallery.js"></script>
 </body>

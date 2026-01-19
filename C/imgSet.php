@@ -5,5 +5,5 @@
     
     $imgQuery = $connImages->query(query: "SELECT * FROM images where user_email='$email'");
     $getImgs = $imgQuery->fetch_all(MYSQLI_ASSOC);
-    echo $getImgs[0]['path'];
+    $imgsSize = $imgQuery->num_rows;
 ?>
