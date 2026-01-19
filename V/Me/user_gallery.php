@@ -37,5 +37,6 @@
             </div>
         </session>
     </div>
+    <script src="../js/userGallery.js"></script>
 </body>
 </html>
