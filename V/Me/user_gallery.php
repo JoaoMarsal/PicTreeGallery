@@ -29,5 +29,13 @@
     <?php
         include '../navbar.php';
     ?>
+    <div id="pageGallery">
+        <session>
+            <div>
+                <hr id="line">
+                <h1 id="title">Explore your saved pictures!</h1>
+            </div>
+        </session>
+    </div>
 </body>
 </html>

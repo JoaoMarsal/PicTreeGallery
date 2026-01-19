@@ -191,6 +191,7 @@ header {
     width: auto;
     height: auto;
     transform: translateY(0.5em) translateX(-0.6em);
+    z-index: 1;
 }
 
 li {
