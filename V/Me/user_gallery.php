@@ -38,23 +38,26 @@
                 <h1 id="title">Explore your saved pictures!</h1>
             </div>
             <div>
-                <div id="filterBox">
-                    <h1 id="filterTitle">Filter: </h1>
-                    <div>
-                        <label for="type">
-                            Core: 
-                        </label>
-                        <select name="nType" id="type">
-                            <option value="">...</option>
-                            <option value="1">Core pictures</option>
-                            <option value="0">Non core pictures</option>
-                        </select>
+                <form method="POST" action="../../C/ImgSet.php">
+                    <div id="filterBox">
+                        <h1 id="filterTitle">Filter: </h1>
+                        <div>
+                            <label for="type">
+                                Core: 
+                            </label>
+                            <select name="nType" id="type">
+                                <option value="">...</option>
+                                <option value="1">Core pictures</option>
+                                <option value="0">Non core pictures</option>
+                            </select>
+                        </div>
+                        <div id="searchBox">
+                            <img src="https://cdn-icons-png.flaticon.com/512/54/54481.png" width="10px">
+                            <input type="text" id="nameSearch" placeholder="Filtrar por nome...">
+                        </div>
+                        <button type="submit">Filter now!</button>
                     </div>
-                    <div id="searchBox">
-                        <img src="https://cdn-icons-png.flaticon.com/512/54/54481.png" width="10px">
-                        <input type="text" id="nameSearch" placeholder="Filtrar por nome...">
-                    </div>
-            </div>
+                </form>
             <div id="UserImages">
 
             </div>
