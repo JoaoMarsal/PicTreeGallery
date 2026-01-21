@@ -73,7 +73,21 @@
             }
             ?>
         ];
-
+        var types = [
+            <?php
+            foreach($getImgs as $key => $value){
+                echo '"'.$getImgs[$key]['type'].'", ';
+            }
+            ?>
+        ];
+        var names = [
+            <?php
+            foreach($getImgs as $key => $value){
+                echo '"'.$getImgs[$key]['name'].'", ';
+            }
+            ?>
+        ];
+        
         var imgSize = <?php echo $imgsSize ?>;
     </script>
     <script src="../js/userGallery.js"></script>
