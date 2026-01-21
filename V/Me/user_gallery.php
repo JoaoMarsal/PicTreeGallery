@@ -31,6 +31,18 @@
     <?php
         include '../navbar.php';
     ?>
+    <div class="hoverBox hidden" onclick="showMetaData()">
+        <div class="cardStyle">
+            <div>
+                <label>Picture's name: </label>
+                <span id="imgName"></span> 
+            </div>
+            <div>
+                <label>Picture's type: </label>
+                <span id="imgType"></span>
+            </div>
+        </div>
+    </div>
     <div id="pageGallery">
         <session>
             <div class="boxTitle">

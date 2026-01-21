@@ -69,3 +69,29 @@
     justify-content: space-between;
 }
 
+.cardStyle{
+    width: fit-content;
+    height: fit-content;
+    background-color: #b3bd88;
+    border: #6b9063 solid 2px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.hoverBox {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: #ede8d0b1;
+    overflow-y: hidden;
+    z-index: 1;
+}
+
+.hidden {
+    display: none;
+}
