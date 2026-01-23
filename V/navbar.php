@@ -12,19 +12,19 @@
 <body>
     <header>
         <nav id="navbar">
-                <a class="textfornav">Home</a>
-                <a class="textfornav">Explore</a>
+                <a class="textfornav navLink" href="/V/user_page.php">Home</a>
+                <a class="textfornav navLink" href="/V/explore.php">Explore</a>
                 <div class="textfornav dropdownMe">Me
                     <div class="dropdownMe-content">
                         <ul>
-                            <li><a href="/V/Me/user_gallery.php">My Gallery</a></li>
-                            <li><a>Profile</a></li>
-                            <li><a>Change accounts</a></li>    
+                            <li><a href="/V/Me/user_gallery.php" class="navLink">My Gallery</a></li>
+                            <li><a href="/V/Me/profile.php" class="navLink">Profile</a></li>
+                            <li><a href="/index.php" class="navLink">Change accounts</a></li>    
                         </ul>
                     </div>
                 </div>
-                <a class="textfornav">About us</a>
-                <a class="textfornav">Support</a>
+                <a class="textfornav navLink" href="/V/about.php">About us</a>
+                <a class="textfornav navLink" href="/V/support.php">Support</a>
         </nav>
     </header>
 </body>
