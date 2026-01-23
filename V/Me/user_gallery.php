@@ -57,17 +57,16 @@
                             <label for="type">
                                 Core: 
                             </label>
-                            <select name="nType" id="type">
-                                <option value="">...</option>
+                            <select name="nType" id="type" onchange="callImages()">
+                                <option value="null">...</option>
                                 <option value="1">Core pictures</option>
                                 <option value="0">Non core pictures</option>
                             </select>
                         </div>
                         <div id="searchBox">
                             <img src="https://cdn-icons-png.flaticon.com/512/54/54481.png" width="10px">
-                            <input type="text" id="nameSearch" placeholder="Filtrar por nome...">
+                            <input type="text" id="nameSearch" placeholder="Filtrar por nome..." onkeyup="callImages()">
                         </div>
-                        <button type="submit">Filter now!</button>
                     </div>
                 </form>
             <div id="UserImages">
