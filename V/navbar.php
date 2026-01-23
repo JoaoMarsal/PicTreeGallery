@@ -12,19 +12,21 @@
 <body>
     <header>
         <nav id="navbar">
-                <a class="textfornav navLink" href="/V/user_page.php">Home</a>
-                <a class="textfornav navLink" href="/V/explore.php">Explore</a>
-                <div class="textfornav dropdownMe">Me
-                    <div class="dropdownMe-content">
-                        <ul>
-                            <li><a href="/V/Me/user_gallery.php" class="navLink">My Gallery</a></li>
-                            <li><a href="/V/Me/profile.php" class="navLink">Profile</a></li>
-                            <li><a href="/index.php" class="navLink">Change accounts</a></li>    
-                        </ul>
-                    </div>
+            <a class="textfornav navLink" href="/V/user_page.php">Home</a>
+            <a class="textfornav navLink" href="/V/explore.php">Explore</a>
+            <div class="textfornav dropdownMe">Me
+                <div class="dropdownMe-content">
+                    <ul>
+                        <li><a href="/V/Me/user_gallery.php" class="navLink">My Gallery</a></li>
+                        <li><a href="/V/Me/profile.php" class="navLink">Profile</a></li>
+                        <li><a href="/index.php" class="navLink">Change accounts</a></li>    
+                    </ul>
                 </div>
-                <a class="textfornav navLink" href="/V/about.php">About us</a>
-                <a class="textfornav navLink" href="/V/support.php">Support</a>
+            </div>
+            <a class="textfornav navLink" href="/V/about.php">About us</a>
+            <a class="textfornav navLink" href="/V/support.php">Support</a>
+            <span class="textfornav">Model user</span>
+            <img id="userPfp" src="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*">
         </nav>
     </header>
 </body>

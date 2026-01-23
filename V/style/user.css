@@ -204,6 +204,19 @@ li {
     text-decoration: none;
 }
 
+#userPfp {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+}
+
+#profile {
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
 li:hover {
     background-color: #b3bd88;
 }
