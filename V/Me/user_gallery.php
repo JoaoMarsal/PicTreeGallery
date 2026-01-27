@@ -31,7 +31,7 @@
     <?php
         include '../navbar.php';
     ?>
-    <div class="hoverBox hidden" onclick="showMetaData()">
+    <div class="hoverBox hidden" onmouseover="showMetaData()">
         <div class="cardStyle">
             <div>
                 <label>Picture's name: </label>

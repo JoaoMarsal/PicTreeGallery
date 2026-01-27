@@ -13,7 +13,7 @@ function callImages(){
             continue;
         }
         var img = document.createElement("img");
-        img.onclick = function showMetaData(){
+        img.onmouseover = function showMetaData(){
             var display = document.body.querySelector(".hoverBox")
             var name = document.body.querySelector("#imgName")
             var type = document.body.querySelector("#imgType")
