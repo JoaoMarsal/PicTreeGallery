@@ -120,7 +120,7 @@ input[type="radio"]{
 
 #navbar {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
     cursor: pointer;
 }
 
@@ -182,12 +182,6 @@ header {
 .textfornav:hover {
     height: fit-content;
     background-color: #b3bd88;
-}
-
-#pfpContainer {
-    display: flex;
-    justify-content: flex-end;  
-    width: 70%;
 }
 
 .dropdownMe-content {
