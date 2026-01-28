@@ -33,6 +33,18 @@
     <?php
         include 'navbar.php';
     ?>
+    <div class="hoverBox hidden" onclick="showMetaData()">
+        <div class="cardStyle">
+            <div>
+                <label>Picture's name: </label>
+                <span id="imgName"></span> 
+            </div>
+            <div>
+                <label>Author: </label>
+                <span id="imgAuthor"></span>
+            </div>
+        </div>
+    </div>
     <div id="explorePage">
         <section id="exploreSession">
             <div class="boxTitle">
@@ -51,7 +63,19 @@
                 echo '"'.$exploreGetImgs[$i]['path'].'", ';
             }
         ?>];
+
+//        const authors = [<?php
+//            for($i = 0; $i < $imgSize; $i++){
+//                echo '"'.$exploreGetImgs[$i]['author'].'", ';
+//            }
+        ?>]; //Author needs implementation on DB
         
+        const names = [<?php
+            for($i = 0; $i < $imgSize; $i++){
+                echo '"'.$exploreGetImgs[$i]['name'].'", ';
+            }
+        ?>];
+
         var imgsLength = <?php echo $exploreImgsSize ?>;
     </script>
     <script src="js/explore.js"></script>
