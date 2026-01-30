@@ -18,7 +18,7 @@ function callImgs(){
                         author.innerHTML = emails[j];
                     } else {
                         authorText = document.querySelector("#author");
-                        authorText.innerText = "Author: ";
+                        authorText.innerText = 'Author: ';
                         author.innerHTML = authors[j];
                     }
                 } else {
