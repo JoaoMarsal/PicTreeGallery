@@ -63,10 +63,10 @@
                 echo '"'.$exploreGetImgs[$i]['path'].'", ';
             }
         ?>];
-//        const authors = [<?php
-//            for($i = 0; $i < $imgSize; $i++){
-//                echo '"'.$exploreGetImgs[$i]['author'].'", ';
-//            }
+        const authors = [<?php
+            for($i = 0; $i < $imgSize; $i++){
+                echo '"'.$exploreGetImgs[$i]['author'].'", ';
+            }
         ?>]; //Author needs implementation on DB
         
         const names = [<?php

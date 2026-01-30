@@ -8,11 +8,11 @@ function callImgs(){
             img.onclick = function showMetaData(){
                 var display = document.body.querySelector(".hoverBox")
                 var name = document.body.querySelector("#imgName")
-                //var type = document.body.querySelector("#imgAuthor")
+                var author = document.body.querySelector("#imgAuthor")
                 if(display.classList.contains("hidden")){
                     display.classList.remove("hidden");
                     name.innerHTML = names[j];
-                    //type.innerHTML = types[i];
+                    author.innerHTML = authors[j];
                 } else {
                     display.classList.add("hidden")
                 }
