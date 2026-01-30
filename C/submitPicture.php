@@ -6,8 +6,10 @@ require_once '../M/config.php';
 if(isset($_POST['imageInsert'])){
     $description = $_POST['imgDescription'];
     $email = $_SESSION['email'];
+    $author = $_SESSION['name'];
     $core = $_POST['imgType'];
     $name = $_POST['imgName'];
+    $privacy = $_POST['imgPrivacy'];
     
     //Image manipulation
     $img = $_FILES['imgFile']['tmp_name']; //Getting the input from the input element
@@ -34,7 +36,15 @@ if(isset($_POST['imageInsert'])){
         $_SESSION['insuficientInput'] = "Didn't specify image core";
         header('Location: ../V/user_page.php');
         exit();
-    } 
+    } else if(!($privacy == "0" or $privacy == "1")){
+        $_SESSION['insuficientInput'] = "Didn't specify image's privacy status";
+        header("Location: ../V/user_page.php");
+        exit();
+    } else if($name === ''){
+        $_SESSION['insuficientInput'] = "Something is wrong with the user's name";
+        header("Location: ../V/user_page.php");
+        exit();
+    }
     //Email used exists
     $emailCheck = $conn->query("SELECT * FROM `users` where email = '$email';");
     if($emailCheck->num_rows < 1){
@@ -47,7 +57,7 @@ if(isset($_POST['imageInsert'])){
     $imgURL = 'images/'.$name.'.'.$imgExt;
     move_uploaded_file($img, "../$imgURL"); //Moving the input to a folder
     
-    $connImages->query("INSERT INTO images(name, description, user_email, type, path) VALUES ('$name', '$description', '$email', '$core', '$imgURL')"); //Added url column in table
+    $connImages->query("INSERT INTO images(name, description, user_email, type, path, privacy, author) VALUES ('$name', '$description', '$email', '$core', '$imgURL', '$privacy', '$author')"); //Added url column in table
     $_SESSION['alertImage'] = 'Image insertion successfull';
     header('Location: ../V/user_page.php');
     exit();

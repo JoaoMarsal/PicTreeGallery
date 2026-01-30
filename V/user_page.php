@@ -69,8 +69,13 @@
                     </div>
                     <div>
                         <label>Core memory?</label>
-                        <div><input name="imgType" type="radio" value="1" id="core" required><label for="core">Yes, core indeed.</label></div>
-                        <div><input name="imgType" type="radio" value="0" id="trivial" required><label for="trivial">No, trivial.</label></div>
+                        <div><input name="imgType" type="radio" value="1" id="core" required><label for="core"> Yes, core indeed.</label></div>
+                        <div><input name="imgType" type="radio" value="0" id="trivial" required><label for="trivial"> No, trivial.</label></div>
+                    </div>
+                    <div>
+                        <label>Privacy status: </label>
+                        <div><input name="imgPrivacy" type="radio" value="1" id="public" required><label for="public"> Public</label></div>
+                        <div><input name="imgPrivacy" type="radio" value="0" id="private" required><label for="private"> Private</label></div>
                     </div>
                     <input class="insert" type="submit" value="Submit" name="imageInsert">
                     </div>
