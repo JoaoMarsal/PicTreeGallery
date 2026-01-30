@@ -40,7 +40,7 @@
                 <span id="imgName"></span> 
             </div>
             <div>
-                <label>Author: </label>
+                <label id="author">Author: </label>
                 <span id="imgAuthor"></span>
             </div>
         </div>
@@ -56,7 +56,6 @@
             </div>
         </section>
     </div>
-    
     <script>
         const paths = [<?php
             for($i = 0; $i < $imgSize; $i++){
@@ -75,6 +74,12 @@
             }
         ?>];
 
+        const emails = [<?php
+            for($i = 0; $i < $imgSize; $i++){
+                echo '"'.$exploreGetImgs[$i]['user_email'].'", ';
+            }
+        ?>];
+        
         var imgsLength = <?php echo $exploreImgsSize ?>;
     </script>
     <script src="js/explore.js"></script>

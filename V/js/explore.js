@@ -12,7 +12,15 @@ function callImgs(){
                 if(display.classList.contains("hidden")){
                     display.classList.remove("hidden");
                     name.innerHTML = names[j];
-                    author.innerHTML = authors[j];
+                    if(authors[j] == ""){
+                        authorText = document.querySelector("#author");
+                        authorText.innerText = "E-mail: ";
+                        author.innerHTML = emails[j];
+                    } else {
+                        authorText = document.querySelector("#author");
+                        authorText.innerText = "Author: ";
+                        author.innerHTML = authors[j];
+                    }
                 } else {
                     display.classList.add("hidden")
                 }
