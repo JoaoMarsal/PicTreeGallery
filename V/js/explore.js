@@ -1,25 +1,25 @@
 var imgs = document.body.querySelector("#showImgs")
 
 function callImgs(){
-    for(let j = 0; j < imgsLength; j++){ 
-        var img = document.createElement("img");
-        img.src = "../../" + paths[j];
-        img.style = "width: 150px; height: 150px; object-fit: cover;"
-        img.onclick = function showMetaData(){
-            var display = document.body.querySelector(".hoverBox")
-            var name = document.body.querySelector("#imgName")
-            //var type = document.body.querySelector("#imgAuthor")
-            if(display.classList.contains("hidden")){
-                display.classList.remove("hidden");
-                name.innerHTML = names[j];
-                //type.innerHTML = types[i];
-            } else {
-                display.classList.add("hidden")
+        for(let j = 0; j < imgsLength; j++){ 
+            var img = document.createElement("img");
+            img.src = "../../" + paths[j];
+            img.style = "width: 150px; height: 150px; object-fit: cover;"
+            img.onclick = function showMetaData(){
+                var display = document.body.querySelector(".hoverBox")
+                var name = document.body.querySelector("#imgName")
+                //var type = document.body.querySelector("#imgAuthor")
+                if(display.classList.contains("hidden")){
+                    display.classList.remove("hidden");
+                    name.innerHTML = names[j];
+                    //type.innerHTML = types[i];
+                } else {
+                    display.classList.add("hidden")
+                }
             }
+            imgs.appendChild(img);
         }
-        imgs.appendChild(img);
     }
-}
 
 function showMetaData(){
             var display = document.body.querySelector(".hoverBox")

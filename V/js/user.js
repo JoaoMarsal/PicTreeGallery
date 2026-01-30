@@ -45,17 +45,20 @@ function saveFile(){
 //Image repository
 
 function imgGeneration(){
-    var imgs = document.querySelector("#imgs")
-    var imgSize = `${(document.body.clientWidth) / (2 * numberImgs)}`
-    var imgList = []
-
-    for(let j = 0; j < numberImgs; j++){
-        var img = document.createElement("img")
-        img.style = "object-fit: cover;"
-        img.src = "../../" + paths[j]; 
-        img.width = imgSize
-        img.height = imgSize
-        imgs.appendChild(img)
-        
-    }
+    if(approved === true){
+        var imgSize = `${(document.body.clientWidth) / (2 * numberImgs)}`
+        var imgList = [];
+        var imgs = document.querySelector("#imgs")
+        for(let j = 0; j < numberImgs; j++){
+            var img = document.createElement("img")
+            img.style = "object-fit: cover;"
+            img.src = "../../" + paths[j]; 
+            img.width = imgSize
+            img.height = imgSize
+            imgs.appendChild(img)
+        }
+    } else {
+        var imgs = document.querySelector("#imgs");
+        imgs.innerHTML = "<p>Couldn't load any images</p>"
+    } 
 }

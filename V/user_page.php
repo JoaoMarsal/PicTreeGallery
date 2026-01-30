@@ -7,6 +7,7 @@
     $role = $_SESSION['role'];
     $imgsLength = $_SESSION['imgNumbers'];
     $imgsPath = $_SESSION['imgsPath'];
+    $approved = $_SESSION['approved'];
 
     if(!isset($_SESSION['email'])){ //Separate verifications, seeing if all is right with session
         header('Location: ../index.php');
@@ -97,8 +98,6 @@
     </div>
     <footer></footer>
     
-    <?php 
-    ?>
     <script>
         var numberImgs= <?= json_encode($imgsLength) ?>;
         //Passing values for path array
@@ -109,6 +108,8 @@
                 }; 
             ?>
             ];
+
+        const approved = <?php echo $_SESSION['approved'] ?>
     </script>
     <script src="js/user.js">
     </script>
