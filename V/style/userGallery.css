@@ -65,6 +65,14 @@
     background-color: white;
 }
 
+#typePrivacy {
+    margin-top: 1em;
+    border: solid 1px #AFB884;
+    border-radius: 1em;
+    padding-left: 5px;
+    background-color: white;
+}
+
 /* Flexbox */
 
 #filterBox {

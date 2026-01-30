@@ -41,6 +41,10 @@
                 <label>Picture's type: </label>
                 <span id="imgType"></span>
             </div>
+            <div>
+                <label>Picture's privacy status: </label>
+                <span id="imgPrivacy"></span>
+            </div>
         </div>
     </div>
     <div id="pageGallery">
@@ -61,6 +65,16 @@
                                 <option value="null">...</option>
                                 <option value="1">Core pictures</option>
                                 <option value="0">Non core pictures</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="typePrivacy">
+                                Privacy: 
+                            </label>
+                            <select name="nPrivacy" id="typePrivacy" onchange="callImages()">
+                                <option value="null">...</option>
+                                <option value="1">Public</option>
+                                <option value="0">Private</option>
                             </select>
                         </div>
                         <div id="searchBox">
@@ -98,7 +112,13 @@
             }
             ?>
         ];
-        
+        var privacies = [
+            <?php
+            foreach($getImgs as $key => $value){
+                echo '"'.$getImgs[$key]['privacy'].'", ';
+            }
+            ?>
+        ];        
         var imgSize = <?php echo $imgsSize ?>;
     </script>
     <script src="../js/userGallery.js"></script>
