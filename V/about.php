@@ -33,7 +33,7 @@
         <session>
             <div class="boxTitle">
                         <h1 id="title">About us</h1>
-            </div>
+    </div>
         </session>
         <session id="textSess">
             <div class="textBox">

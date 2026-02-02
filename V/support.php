@@ -28,5 +28,12 @@
     <?php
         include 'navbar.php'
     ?>
+    <div id="supportPage">
+        <session>
+            <div class="boxTitle">
+                 <h1 id="title">Support</h1>
+            </div>
+        </session>
+    </div>
 </body>
 </html>
