@@ -46,7 +46,7 @@
                 <span id="imgPrivacy"></span>
             </div>
             <div id="queryButtons">
-                <form>
+                <form action="../C/delImg.php" method="POST">
                     <button id="delButton">Delete</button>
                 </form>
                 <form>    
