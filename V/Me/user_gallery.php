@@ -78,7 +78,7 @@
                             </select>
                         </div>
                         <div id="searchBox">
-                            <img id="lupa" src="https://cdn-icons-png.flaticon.com/512/54/54481.png" width="10px">
+                            <img id="lupa" src="https://cdn-icons-png.flaticon.com/512/54/54481.png" width="10px" height="10px">
                             <input type="text" id="nameSearch" placeholder="Filtrar por nome..." onkeyup="callImages()">
                         </div>
                     </div>

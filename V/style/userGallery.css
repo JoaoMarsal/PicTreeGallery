@@ -27,6 +27,8 @@
 }
 
 #searchBox {
+    display: flex;
+    flex-direction: row;
     margin-top: 0.7em;
     border: solid 2px #AFB884;
     width: fit-content;
@@ -53,6 +55,8 @@
 }
 
 #filterBox {
+    flex-direction: row;
+    padding: 2em;
     margin: 2em;
     width: 50%;
 }
@@ -71,6 +75,11 @@
     border-radius: 1em;
     padding-left: 5px;
     background-color: white;
+}
+
+#lupa {
+    margin-top: 3px;
+    margin-right: 3px;
 }
 
 /* Flexbox */
