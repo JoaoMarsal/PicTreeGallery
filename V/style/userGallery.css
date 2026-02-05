@@ -82,7 +82,29 @@
     margin-right: 3px;
 }
 
+#queryButtons button {
+    width: 20%;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+#delButton {
+    background-color: rgb(222, 53, 53);
+    border: #6b9063 solid 2px;
+}
+
+#editButton {
+    background-color: #b3bd88;
+    border: #6b9063 solid 2px;
+}
+
 /* Flexbox */
+
+#queryButtons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
 #filterBox {
     display: flex;

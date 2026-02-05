@@ -45,6 +45,10 @@
                 <label>Picture's privacy status: </label>
                 <span id="imgPrivacy"></span>
             </div>
+            <div id="queryButtons">
+                <button id="delButton">Delete</button>
+                <button id="editButton">Edit</button>
+            </div>
         </div>
     </div>
     <div id="pageGallery">
