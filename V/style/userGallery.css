@@ -82,21 +82,26 @@
     margin-right: 3px;
 }
 
-#queryButtons button {
+#queryButtons form {
     width: 20%;
-    margin: 5px;
-    border-radius: 5px;
-    color: white;
 }
 
 #delButton {
     background-color: rgb(222, 53, 53);
     border: #6b9063 solid 2px;
+    margin: 5px;
+    border-radius: 5px;
+    color: white;
+    padding: 2px;
 }
 
 #editButton {
     background-color: #b3bd88;
     border: #6b9063 solid 2px;
+    margin: 5px;
+    border-radius: 5px;
+    color: white;
+    padding: 2px;
 }
 
 /* Flexbox */

@@ -46,8 +46,12 @@
                 <span id="imgPrivacy"></span>
             </div>
             <div id="queryButtons">
-                <button id="delButton">Delete</button>
-                <button id="editButton">Edit</button>
+                <form>
+                    <button id="delButton">Delete</button>
+                </form>
+                <form>    
+                    <button id="editButton">Edit</button>
+                </form>    
             </div>
         </div>
     </div>
