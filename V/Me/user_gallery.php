@@ -46,7 +46,8 @@
                 <span id="imgPrivacy"></span>
             </div>
             <div id="queryButtons">
-                <form action="../C/delImg.php" method="POST">
+                <form action="../../C/delImg.php" method="POST">
+                    <input id="imageId" name="nImgId" style="display: none">
                     <button id="delButton">Delete</button>
                 </form>
                 <form>    
@@ -104,6 +105,13 @@
             foreach($getImgs as $key => $value){
                 echo '"'.$getImgs[$key]['path'].'", ';
             }
+            ?>
+        ];
+        var ids = [
+            <?php
+            foreach($getImgs as $key => $value){
+                echo '"'.$getImgs[$key]['id'].'", ';
+            }                
             ?>
         ];
         var types = [

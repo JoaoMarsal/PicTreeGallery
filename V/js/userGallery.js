@@ -22,9 +22,11 @@ function callImages(){
             var name = document.body.querySelector("#imgName")
             var type = document.body.querySelector("#imgType")
             var privacy = document.body.querySelector("#imgPrivacy")
+            var imageId = document.body.querySelector("#imageId");
             if(display.classList.contains("hidden")){
                 display.classList.remove("hidden");
                 name.innerHTML = names[i];
+                imageId.value = ids[i];
                 if(types[i] == 1){
                     type.innerHTML = "Core";    
                 } else {
