@@ -3,7 +3,7 @@
 
     $email = $_SESSION['email'];
     
-    $imgQuery = $connImages->query(query: "SELECT * FROM images where user_email='$email'");
+    $imgQuery = $connImages->query(query: "SELECT * FROM images WHERE user_email='$email'");
     $getImgs = $imgQuery->fetch_all(MYSQLI_ASSOC);
     $imgsSize = $imgQuery->num_rows;
 ?>
