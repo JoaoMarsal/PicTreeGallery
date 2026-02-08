@@ -51,7 +51,7 @@
                     <button id="delButton">Delete</button>
                 </form>
                 <form action="../../C/editImg.php" method="POST">
-                    <input id="imageId" name="nImgId" style="display: none">    
+                    <input id="editImageId" name="nImgId" style="display: none">    
                     <button id="editButton">Edit</button>
                 </form>    
             </div>
