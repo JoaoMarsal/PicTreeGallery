@@ -40,9 +40,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
     <title>PicTree - Your place for photos</title>
 </head>
-<body>
+<body onload="loadInputs()">
     <?php
         include '../navbar.php';
     ?>
+    <session>
+        <div>
+            <form>
+                <input type="text" id="name" name="fImgName">
+                <input type="text" id="description" name="fImgDescription">
+                <input type="radio" name="fImgType" value="0" id="type">
+                <input type="radio" name="fImgType" value="1" id="type">
+                <input type="radio" name="fImgPrivacy" value="0" id="type">
+                <input type="radio" name="fImgPrivacy" value="1" id="type">
+            </form>
+        </div>
+    </session>
+    <script>
+        var imgName = <?php echo $imgName ?>;
+        var imgDescription = <?php echo $imgDescription ?>;
+        var imgType = <?php echo $imgType ?>;
+        var imgPrivacy = <?php echo $imgPrivacy ?>;
+    </script>
+    <script src="../js/edit.js">
+
+    </script>
 </body>
  
