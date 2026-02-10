@@ -2,10 +2,6 @@
     session_start();
     require_once '../../C/imgSet.php';
 
-    $name = $_SESSION['name'];
-    $email = $_SESSION['email'];
-    $role = $_SESSION['role'];
-
     if(!isset($_SESSION['email'])){ //Separate verifications, seeing if all is right with session
         header('Location: ../../index.php');
     } else if(!isset($_SESSION['role'])){
@@ -13,6 +9,25 @@
     } else if(!isset($_SESSION['name'])){
         header('Location: ../../index.php');
     }
+
+    $name = $_SESSION['name'];
+    $email = $_SESSION['email'];
+    $role = $_SESSION['role'];
+
+    if(!isset($_SESSION['edit']['name'])){ //Separate verifications, seeing if all is right with selected image for editing
+        header('Location: user_gallery.php');
+    } else if(!isset($_SESSION['edit']['description'])){
+        header('Location: user_gallery');
+    } else if(!isset($_SESSION['edit']['type'])){
+        header('Location: user_gallery.php');
+    } else if(!isset($_SESSION['edit']['privacy'])){
+        header('Location: user_gallery.php');
+    }
+
+    $imgName = $_SESSION['edit']['name'];
+    $imgDescription = $_SESSION['edit']['description'];
+    $imgType = $_SESSION['edit']['type'];
+    $imgPrivacy = $_SESSION['edit']['privacy'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

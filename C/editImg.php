@@ -9,6 +9,12 @@
     $email = $_SESSION['email'];
     
     $editComponentsQuery = $connImages->query("SELECT * FROM images WHERE id = $id AND user_email = '$email'");
+    $getComponents = $editComponentsQuery->fetch_assoc();
+    $_SESSION['edit']['name'] = $getComponents['name'];
+    $_SESSION['edit']['description'] = $getComponents['description'];
+    $_SESSION['edit']['name'] = $getComponents['name'];
+    $_SESSION['edit']['type'] = $getComponents['type'];
+    $_SESSION['edit']['privacy'] = $getComponents['privacy'];
     if($editComponentsQuery->num_rows > 0){
         header('Location: ../V/Me/edit.php');
     } else {
