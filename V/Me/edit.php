@@ -57,10 +57,10 @@
         </div>
     </session>
     <script>
-        var imgName = <?php echo $imgName ?>;
-        var imgDescription = <?php echo $imgDescription ?>;
-        var imgType = <?php echo $imgType ?>;
-        var imgPrivacy = <?php echo $imgPrivacy ?>;
+        var imgName = '<?php echo $imgName ?>';
+        var imgDescription = '<?php echo $imgDescription ?>';
+        var imgType = '<?php echo $imgType ?>';
+        var imgPrivacy = '<?php echo $imgPrivacy ?>';
     </script>
     <script src="../js/edit.js">
 
