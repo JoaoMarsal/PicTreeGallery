@@ -32,3 +32,10 @@
 textarea {
     resize: vertical;
 }
+
+.cancelButton {
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color:  rgb(191, 65, 65);
+    color: white;
+}

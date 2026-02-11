@@ -41,7 +41,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
     <title>PicTree - Your place for photos</title>
 </head>
-<body onload="loadInputs()">
+<body>
     <?php
         include '../navbar.php';
     ?>
@@ -51,15 +51,20 @@
                 <div class="margin">
                     <label for="name">Image's name:</label>
                     <input type="text" id="name" name="fImgName">
+                    <button type="button" class="cancelButton" onclick="recallValueName()">X</button>
                 </div>     
                     <label class="margin" for="description">Image's Description:</label>
-                    <textarea class="margin" id="description" name="fImgDescription"></textarea>
-                <div class="margin">
+                    <div>
+                        <textarea class="margin" id="description" name="fImgDescription"></textarea>
+                        <button type="button" class="cancelButton" onclick="recallValueDescription()">X</button>
+                    </div>    
+                    <div class="margin">
                     <label>Image's type:</label>
                     <input type="radio" name="fImgType" value="0" id="type0">
                     <label for="type0">Non-core</label>
                     <input type="radio" name="fImgType" value="1" id="type1">
                     <label for="type1">Core</label>
+                    <button type="button" class="cancelButton" onclick="recallValueType()">X</button>
                 </div>
                 <div class="margin">
                     <label>Privacy:</label>
@@ -67,6 +72,7 @@
                     <label for="privacy0">Public</label>
                     <input type="radio" name="fImgPrivacy" value="1" id="privacy1">
                     <label for="privacy1">Private</label>
+                    <button type="button" class="cancelButton" onclick="recallValuePrivacy()">X</button>
                 </div>
                 <div>
                     <a id="cancel" href="user_gallery.php">Cancel</a>
