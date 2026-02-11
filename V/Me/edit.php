@@ -36,6 +36,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/user.css">
     <link rel="stylesheet" href="../style/userGallery.css">
+    <link rel="stylesheet" href="../style/edit.css">
     <link href="https://fonts.googleapis.com/css2?family=BBH+Hegarty&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
     <title>PicTree - Your place for photos</title>
@@ -46,13 +47,31 @@
     ?>
     <session>
         <div>
-            <form>
-                <input type="text" id="name" name="fImgName">
-                <input type="text" id="description" name="fImgDescription">
-                <input type="radio" name="fImgType" value="0" id="type0">
-                <input type="radio" name="fImgType" value="1" id="type1">
-                <input type="radio" name="fImgPrivacy" value="0" id="privacy0">
-                <input type="radio" name="fImgPrivacy" value="1" id="privacy1">
+            <form id="editForm">
+                <div class="margin">
+                    <label for="name">Image's name:</label>
+                    <input type="text" id="name" name="fImgName">
+                </div>     
+                    <label class="margin" for="description">Image's Description:</label>
+                    <textarea class="margin" id="description" name="fImgDescription"></textarea>
+                <div class="margin">
+                    <label>Image's type:</label>
+                    <input type="radio" name="fImgType" value="0" id="type0">
+                    <label for="type0">Non-core</label>
+                    <input type="radio" name="fImgType" value="1" id="type1">
+                    <label for="type1">Core</label>
+                </div>
+                <div class="margin">
+                    <label>Privacy:</label>
+                    <input type="radio" name="fImgPrivacy" value="0" id="privacy0">
+                    <label for="privacy0">Public</label>
+                    <input type="radio" name="fImgPrivacy" value="1" id="privacy1">
+                    <label for="privacy1">Private</label>
+                </div>
+                <div>
+                    <a id="cancel" href="user_gallery.php">Cancel</a>
+                    <button id="confirm" type="submit">Confirm</button>    
+                </div>
             </form>
         </div>
     </session>
