@@ -49,10 +49,10 @@
             <form>
                 <input type="text" id="name" name="fImgName">
                 <input type="text" id="description" name="fImgDescription">
-                <input type="radio" name="fImgType" value="0" id="type">
-                <input type="radio" name="fImgType" value="1" id="type">
-                <input type="radio" name="fImgPrivacy" value="0" id="type">
-                <input type="radio" name="fImgPrivacy" value="1" id="type">
+                <input type="radio" name="fImgType" value="0" id="type0">
+                <input type="radio" name="fImgType" value="1" id="type1">
+                <input type="radio" name="fImgPrivacy" value="0" id="privacy0">
+                <input type="radio" name="fImgPrivacy" value="1" id="privacy1">
             </form>
         </div>
     </session>
