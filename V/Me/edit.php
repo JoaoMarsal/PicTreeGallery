@@ -47,7 +47,7 @@
     ?>
     <session>
         <div>
-            <form id="editForm">
+            <form action="../../C/confirmEdit.php" method="POST" id="editForm">
                 <div class="margin">
                     <label for="name">Image's name:</label>
                     <input type="text" id="name" name="fImgName">

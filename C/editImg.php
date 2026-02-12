@@ -15,6 +15,7 @@
     $_SESSION['edit']['name'] = $getComponents['name'];
     $_SESSION['edit']['type'] = $getComponents['type'];
     $_SESSION['edit']['privacy'] = $getComponents['privacy'];
+    $_SESSION['edit']['id'] = $getComponents['id'];
     if($editComponentsQuery->num_rows > 0){
         header('Location: ../V/Me/edit.php');
     } else {
