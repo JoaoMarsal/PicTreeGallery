@@ -1,7 +1,7 @@
 #editForm {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 99%;
 }
 
 #cancel {
@@ -31,6 +31,7 @@
 
 textarea {
     resize: vertical;
+    width: 97%;
 }
 
 .cancelButton {
@@ -38,4 +39,22 @@ textarea {
     padding-right: 5px;
     background-color:  rgb(191, 65, 65);
     color: white;
+}
+
+.inputEdit {
+    background-color: #b3bd88;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+#name {
+    width: 97%;
+}
+
+#button {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 85%;
+    border: white solid 5px;
 }
