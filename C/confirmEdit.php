@@ -16,7 +16,7 @@
         header('Location: ../V/Me/user_gallery.php');
         $_SESSION['error']['input'] = "Characters exceeded";
         exit();
-    } else if(strlen($newDescription) <= 0 || strlen($newDescription) > 100){
+    } else if(strlen($newDescription) < 0 || strlen($newDescription) > 100){
         header('Location: ../V/Me/user_gallery.php');
         $_SESSION['error']['input'] = "Characters exceeded";
         exit();

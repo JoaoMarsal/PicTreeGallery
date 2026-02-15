@@ -13,7 +13,11 @@ function callImgs(){
                 if(display.classList.contains("hidden")){
                     display.classList.remove("hidden");
                     name.innerHTML = names[j];
-                    description.innerHTML = descriptions[j]
+                    if(descriptions[j].length == 0){
+                        description.innerHTML = "No available description."
+                    } else {
+                        description.innerHTML = descriptions[j];
+                    }
                     if(authors[j] == ""){
                         authorText = document.querySelector("#author");
                         authorText.innerText = "E-mail: ";
