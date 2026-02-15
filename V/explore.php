@@ -43,6 +43,10 @@
                 <label id="author">Author: </label>
                 <span id="imgAuthor"></span>
             </div>
+            <div>
+                <label id="description">Description: </label>
+                <span id="imgDescription"></span>
+            </div>
         </div>
     </div>
     <div id="explorePage">
@@ -80,6 +84,12 @@
             }
         ?>];
         
+        const descriptions = [<?php
+            for($i = 0; $i < $imgSize; $i++){
+                echo '"'.$exploreGetImgs[$i]['description'].'", ';
+            }
+        ?>];
+
         var imgsLength = <?php echo $exploreImgsSize ?>;
     </script>
     <script src="js/explore.js"></script>

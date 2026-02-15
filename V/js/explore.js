@@ -9,9 +9,11 @@ function callImgs(){
                 var display = document.body.querySelector(".hoverBox")
                 var name = document.body.querySelector("#imgName")
                 var author = document.body.querySelector("#imgAuthor")
+                var description = document.body.querySelector("#imgDescription");
                 if(display.classList.contains("hidden")){
                     display.classList.remove("hidden");
                     name.innerHTML = names[j];
+                    description.innerHTML = descriptions[j]
                     if(authors[j] == ""){
                         authorText = document.querySelector("#author");
                         authorText.innerText = "E-mail: ";

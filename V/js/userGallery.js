@@ -13,7 +13,7 @@ function callImages(){
             continue;
         } else if(!names[i].includes(filterNameRequest.value)){
             continue;
-        } else if(filterTypePrivacyRequest.value != "null" && filterTypePrivacyRequest.value != privacies[i]){
+        } else if(filterTypePrivacyRequest.value != "null" && filterTypePrivacyRequest.value == privacies[i]){
             continue;
         }
         var img = document.createElement("img");
@@ -35,9 +35,9 @@ function callImages(){
                     type.innerHTML = "Non core";
                 }
                 if(privacies[i] == 1){
-                    privacy.innerHTML = "Public";    
+                    privacy.innerHTML = "Private";    
                 } else {
-                    privacy.innerHTML = "Private";
+                    privacy.innerHTML = "Public";
                 }
             } else {
                 display.classList.add("hidden")
