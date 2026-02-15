@@ -44,7 +44,7 @@
                 <span id="imgAuthor"></span>
             </div>
             <div>
-                <label id="description">Description: </label>
+                <label id="description" style="display: block">Description: </label>
                 <span id="imgDescription"></span>
             </div>
         </div>
