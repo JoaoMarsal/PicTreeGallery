@@ -90,9 +90,9 @@
                 <h1 id="title">Explore more pictures</h1>
             </div>  
             <div id="imgRepository">
-                <div id="imgs">
-                    
-                </div>
+                <a href="explore.php" id="imgs">
+                        <!--JavaScript generated imgs components-->
+                </a>
             </div>             
         </session>
     </div>

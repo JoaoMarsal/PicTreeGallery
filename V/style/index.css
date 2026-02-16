@@ -98,6 +98,20 @@ input {
     width: fit-content;
 }
 
-/*
-#dccda8
-*/
+.error-message {
+    background-color: pink;
+    width: fit-content;
+    font-family: "Google Sans", sans-serif;
+    color: black;
+    padding: 3px;
+    padding-right: 6px;
+    border: solid rgb(253, 167, 167) 2px;
+    outline: 2px solid pink;
+    border-radius: 5px;
+}
+
+#nTips {
+    color: grey;
+    font-size: 10px;
+    font-family: "Google Sans", sans-serif;
+}

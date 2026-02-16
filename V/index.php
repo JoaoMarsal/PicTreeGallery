@@ -1,15 +1,13 @@
 <?php
     session_start();
-    session_unset();
 
     $errors = [
-        'login' => $_SESSION['login_error'] ?? '',
+        'login' => $_SESSION['login_malfunction'] ?? '',
         'register' => $_SESSION['register_error'] ?? ''
     ];
     $activeForm = $_SESSION['active_form'] ?? 'nLogin';
 
-    session_unset();
-
+    
     function showError($error) {
         return !empty($error) ? "<p class='error-message'>$error</p>" : '';
     }
@@ -17,6 +15,8 @@
     function isActiveForm($formName, $activeForm) {
         return $formName  !== $activeForm ? 'hidden' : '';
     }
+
+    session_unset();
 ?>
 
 <!DOCTYPE html>
@@ -40,12 +40,12 @@
             <h1 class="title">Login</h1>
             <form method="POST" action="../C/login.php">
                 <div class="formBox">
-                    <?= showError($errors['login'])?>
-                    <label for="nName">E-mail:</label>
-                    <input class="formInput" type="text" id="nName" placeholder="Email" name="nLoginEmail">
-                    <label for="nLoginPassword">Password:</label>
-                    <input class="formInput" id="nLoginPassword" type="password" name="nLoginPassword" placeholder="Password">
+                    <label for="nName">E-mail</label>
+                    <input required class="formInput" type="text" id="nName" placeholder="Email" name="nLoginEmail">
+                    <label for="nLoginPassword">Password</label>
+                    <input required class="formInput" id="nLoginPassword" type="password" name="nLoginPassword" placeholder="Password">
                     <button type="submit" name="nLogin" class="button">Get in</button>
+                    <?= showError(error: $errors['login'])?>
                     <p>Don't have an account? <a onclick="signUp()">Sign up</a></p>
                 </div>
             </form>
@@ -55,14 +55,15 @@
             <form method="POST" action="../C/login.php">
             <h1 class="title">Registro</h1>
             <div class="formBox">
-                    <?= showError($errors['register'])?>
-                    <label for="nName">Username:</label>
-                    <input class="formInput" id="nName" type="text" name="nName" placeholder="User name">
-                    <label for="nEmail">E-mail:</label>
-                    <input class="formInput" id="nEmail" type="text" name="nEmail" placeholder="E-mail">
-                    <label for="nPassword">Password:</label>
-                    <input class="formInput" id="nPassword" type="password" name="nPassword" placeholder="Password">
+                    <label for="nName">Username</label>
+                    <input required class="formInput" id="nName" type="text" name="nName" placeholder="User name">
+                    <label for="nEmail">E-mail</label>
+                    <input required class="formInput" id="nEmail" type="text" name="nEmail" placeholder="E-mail">
+                    <label for="nPassword">Password</label>
+                    <input required class="formInput" id="nPassword" type="password" name="nPassword" placeholder="Password" onkeyup="passwordCheck()">
+                    <span id="nTips"></span>
                     <button name="nRegister" type="submit" class="button">Sign Up</button>
+                    <?= showError($errors['register'])?>
                     <p>Already have an account?<a onclick="signUp()">Log in</a></p>
                 </div>    
             </form>
