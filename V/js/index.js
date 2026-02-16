@@ -22,6 +22,8 @@ function passwordCheck(){
         passwordAdvice.innerText = "*Password must contain at least one upper case letter"
     } else if(hasLowerCase(password.value)){
         passwordAdvice.innerText = "*Password must contain at least one lower case letter"
+    } else if(/^[a-zA-Z]+$/.test(password.value)) {
+        passwordAdvice.innerText = "*Password must contain at least one digit"    
     } else if(/^[a-zA-Z0-9]+$/.test(password.value)) {
         passwordAdvice.innerText = "*Password must contain at least one special character"    
     } else {

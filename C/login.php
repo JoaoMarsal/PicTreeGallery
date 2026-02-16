@@ -10,8 +10,7 @@
         $password = password_hash($_POST['nPassword'], PASSWORD_DEFAULT);
 
         emailCheck($email);
-        passwordVerify($password);
-
+        passwordVerify($_POST['nPassword']);
 
         $checkEmail = $conn->query("SELECT email FROM users WHERE email = '$email'");
         if($checkEmail->num_rows > 0){
