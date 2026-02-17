@@ -14,9 +14,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/V/style/index.css">
-    <script src="/V/js/index.js"></script>
+    <link rel="manifest" href="/manifest.json">
 </head>
 <body>
+    <script src="/V/js/index.js"></script>
+    <script>
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker.register('/service-worker.js')
+        }
+    </script>
 </body>
 </html>
 
